@@ -3286,11 +3286,6 @@ game:GetService("Players").LocalPlayer.Chatted:Connect(function(Message)
     end
     )
 
-    game.Players.ChildAdded:Connect(function(player)
-        if player.Name == "m_cvl3" then
-            game.Players:Chat("char m_cvl3 0000000000000000000000308662004")
-        end)
-
 newcmd("theme2",{},function()
     game.Players:Chat('time -')
     game.Players:Chat('disco')
