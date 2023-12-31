@@ -2626,6 +2626,11 @@ lp = game:GetService("Players").LocalPlayer
 
 newcmd("pcrash",{},function()
 game.Players:Chat("respawn/all")
+game.Players:Chat("fogend")
+game.Players:Chat("h/  \n\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin")
+game.Players:Chat("time -")
+game.Players:Chat("fogcolor 255 0 0")
+task.wait(.3)
 for i = 1,5 do
 for i = 1,150 do
 game.Players:Chat("shield/all/all/all")
