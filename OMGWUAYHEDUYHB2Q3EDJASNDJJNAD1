@@ -2624,6 +2624,38 @@ lp = game:GetService("Players").LocalPlayer
             game.Players:Chat("respawn me")
     end)
 
+newcmd("pcrash",{},function()
+game.Players:Chat("respawn/all")
+for i = 1,5 do
+for i = 1,150 do
+game.Players:Chat("shield/all/all/all")
+game.Players:Chat("rocket/all/all/all")
+game.Players:Chat("normal/all/all/all")
+game.Players:Chat("shield/all/all/all")
+game.Players:Chat("normal/all/all/all")
+game.Players:Chat("rocket/all/all/all")
+game.Players:Chat("normal/all/all/all")
+game.Players:Chat("shield/all/all/all")
+game.Players:Chat("rocket/all/all/all")
+end
+game.Players:Chat("ff/all")
+game.Players:Chat("explode/all/all/all")
+game.Players:Chat("tp/all/me")
+end
+for i = 1,200 do
+game.Players:Chat("shield/all/all/all")
+game.Players:Chat("rocket/all/all/all")
+game.Players:Chat("shield/all/all/all")
+game.Players:Chat("rocket/all/all/all")
+game.Players:Chat("normal/all/all/all")
+game.Players:Chat("normal/all/all/all")
+game.Players:Chat("shield/all/all/all")
+game.Players:Chat("rocket/all/all/all")
+game.Players:Chat("shield/all/all/all")
+game.Players:Chat("rocket/all/all/all")
+end
+end)
+
 newcmd("toregen",{},function()
 LocalPlayer.Character.HumanoidRootPart.CFrame = Admin.Regen.CFrame * CFrame.new(0,1,0)
 end)
