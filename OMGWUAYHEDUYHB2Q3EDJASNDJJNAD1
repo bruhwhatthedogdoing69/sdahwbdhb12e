@@ -2624,12 +2624,14 @@ lp = game:GetService("Players").LocalPlayer
             game.Players:Chat("respawn me")
     end)
 
+    print("test")
+
 newcmd("pcrash",{},function()
 game.Players:Chat("respawn/all")
-game.Players:Chat("fogend")
-game.Players:Chat("h/  \n\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin\n\nperson299 crashed by martin")
-game.Players:Chat("time -")
-game.Players:Chat("fogcolor 255 0 0")
+game.Players:Chat("ambient/255 0 255")
+game.Players:Chat("h/  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin")
+game.Players:Chat("time/0")
+game.Players:Chat("outdoorambient/255 0 255")
 task.wait(.3)
 for i = 1,5 do
 for i = 1,150 do
