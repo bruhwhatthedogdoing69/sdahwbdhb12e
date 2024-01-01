@@ -2629,10 +2629,9 @@ lp = game:GetService("Players").LocalPlayer
 newcmd("pcrash",{},function()
 game.Players:Chat("respawn/all")
 game.Players:Chat("ambient/255 0 255")
-game.Players:Chat("h/  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin")
 game.Players:Chat("time/0")
 game.Players:Chat("outdoorambient/255 0 255")
-task.wait(.3)
+game.Players:Chat("h/  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin")
 for i = 1,5 do
 for i = 1,150 do
 game.Players:Chat("shield/all/all/all")
