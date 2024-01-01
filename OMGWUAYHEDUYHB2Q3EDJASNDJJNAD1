@@ -2168,6 +2168,17 @@ newcmd("clip",{},function()
     Loops.noclip = false
 end)
 
+newcmd("carlag",{},function()
+    for i = 1,275 do
+game.Players:Chat("unchar all all all")
+end
+wait(13)
+for i = 1,1000 do
+game:GetService("RunService").RenderStepped:Wait()
+game.Players:Chat("gear others 000000000000000000000000000000000000000000000000000000000000000000000000253519495")
+end
+end)
+
 newcmd("god",{},function()
     Loops.autogod = true
     repeat game:GetService("RunService").RenderStepped:Wait()
