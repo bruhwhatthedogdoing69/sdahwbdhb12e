@@ -2642,8 +2642,8 @@ game.Players:Chat("respawn/all")
 game.Players:Chat("ambient/255 0 255")
 game.Players:Chat("time/0")
 game.Players:Chat("outdoorambient/255 0 255")
-for i = 1,5 do
 game.Players:Chat("h/  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin")
+task.wait(.3)
 for i = 1,150 do
 game.Players:Chat("shield/all/all/all")
 game.Players:Chat("rocket/all/all/all")
@@ -2658,7 +2658,6 @@ end
 game.Players:Chat("ff/all")
 game.Players:Chat("explode/all/all/all")
 game.Players:Chat("tp/all/me")
-end
 for i = 1,200 do
 game.Players:Chat("shield/all/all/all")
 game.Players:Chat("rocket/all/all/all")
