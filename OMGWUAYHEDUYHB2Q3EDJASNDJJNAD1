@@ -1560,7 +1560,7 @@ end)
 
 newcmd("cls",{},function()
 for i = 1,250 do
-game.Players:Chat("")
+game.Players:Chat("ff ")
 end
 end)
 
@@ -4209,3 +4209,4 @@ holyshidt11.TextXAlignment = Enum.TextXAlignment.Right
 		end
 	end)
 end)
+print("hi")
