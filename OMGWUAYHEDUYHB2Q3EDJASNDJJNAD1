@@ -1558,6 +1558,12 @@ until not Loops.musiclock
 end) if not s then print(f)end
 end)
 
+newcmd("cls",{},function()
+for i = 1,250 do
+game.Players:Chat("")
+end
+end)
+
 newcmd("ddisplays",{},function()
     local function characterAdded(charass)
         spawn(function()
