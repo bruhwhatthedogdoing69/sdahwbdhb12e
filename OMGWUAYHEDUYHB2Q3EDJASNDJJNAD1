@@ -3587,7 +3587,7 @@ end)
 newcmd("batman",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
-        task. wait(0.5)
+        task.wait(0.5)
         game.Players:Chat("char "..v.Name.." 4753921187")
         task.wait(0.000000000000000000000000001)
         game.Players:Chat("shirt "..v.Name.." 0000000000000000000000000000000003049284724")
@@ -3597,6 +3597,27 @@ newcmd("batman",{"player"},function(args)
         game.Players:Chat("hat "..v.Name.." 00000000000000000000000000000000000008657452439")
         game.Players:Chat("hat "..v.Name.." 00000000000000000000000000000000000007667467979")
         game.Players:Chat("hat "..v.Name.." 000000000000000000000000000000000000026342443")
+        game.Players:Chat("tp "..v.Name.." me")
+    end
+end)
+
+newcmd("what",{"player"},function(args)
+    local Player = GetPlayers(args[1])
+    for i,v in pairs(Player) do
+        task.wait(0.5)
+        game.Players:Chat("tshirt "..v.Name.." 00000000000000000000000000000000015901423839")
+        game.Players:Chat("pants "..v.Name.." 00000000000000000000000000000000013160985658")
+        game.Players:Chat("shirt "..v.Name.." 0000000000000000000000000000000005141760869")
+    end
+end)
+
+newcmd("drstrange",{"player"},function(args)
+    local Player = GetPlayers(args[1])
+    for i,v in pairs(Player) do
+        task.wait(0.5)
+        game.Players:Chat("unhat "..v.Name)
+        game.Players:Chat("shirt "..v.Name.." 7359606831")
+        game.Players:Chat("")
         game.Players:Chat("tp "..v.Name.." me")
     end
 end)
