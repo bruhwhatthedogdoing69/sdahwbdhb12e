@@ -3601,6 +3601,33 @@ newcmd("batman",{"player"},function(args)
     end
 end)
 
+newcmd("strange",{"player"},function(args)
+    local Player = GetPlayers(args[1])
+    for i,v in pairs(Player) do
+        task.wait(0.5)
+        game.Players:Chat("char "..v.Name.." 4753921187")
+        game.Players:Chat("shirt "..v.Name.." 0000000000000000000000000000000009553813813")
+        game.Players:Chat("tshirt "..v.Name.." 0000000000000000000000000000000007359606831")
+        game.Players:Chat("pants "..v.Name.." 0000000000000000000000000000000009553817759")
+        game.Players:Chat("hat "..v.Name.." 000000000000000000000000000000000000086903783856")
+        game.Players:Chat("hat "..v.Name.." 00000000000000000000000000000000000004374334355")
+        game.Players:Chat("cape "..v.Name.." crimson")
+        game.Players:Chat("tp "..v.Name.." me")
+    end
+end)
+
+newcmd("clown",{"player"},function(args)
+    local Player = GetPlayers(args[1])
+    for i,v in pairs(Player) do
+        task.wait(0.5)
+        game.Players:Chat("paint "..v.Name.." white")
+        game.Players:Chat("shirt "..v.Name.." 00000000000000000000000000000000011238302368")
+        game.Players:Chat("pants "..v.Name.." 0000000000000000000000000000000001328316296")
+        game.Players:Chat("hat "..v.Name.." 000000000000000000000000000000000000015469944")
+        game.Players:Chat("tp "..v.Name.." me")
+    end
+end)
+
 newcmd("what",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
