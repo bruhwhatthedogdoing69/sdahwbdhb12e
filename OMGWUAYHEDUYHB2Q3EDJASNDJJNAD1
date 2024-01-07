@@ -1,226 +1,11 @@
 local Settings = {
     ["Autorun Commands"] = {"antis", "welcome", "a", "novamp","god","nok","nrocket",}, -- Commands to run automatically
-    ["Default wl"] = {"islqy", "sgoslee", "heykidscandyinmycar", "veIincy","Purelivis", "alyeqh", "EHiplayYN", "jjjuuikjjikkju", "punchy39", "dunglq333", "emriyaI", "ssxnflower", "skyzif", "cythicial", "Di33le2", "Ripend", "r_qch", "Minix_dragon", "AyItsRachel", "n0tbsy", "Swanill", "lonelystreetcat", "frietim12", "Dipaus_1", "clisrespect"},
-    ["Default Banned"] = {"2cool2befaded", "jhjss", "ghostroblox570", "bcakroms2", "Let_emhanglow", "skittlemasher", "Brontinoa", "brghffdgj"},
+    ["Default wl"] = {"islqy", "Dekryptionite", "clydekash", "E4_DQ", "ripcxo", "feistve", "heykidscandyinmycar", "veIincy","Purelivis", "alyeqh", "EHiplayYN", "jjjuuikjjikkju", "punchy39", "dunglq333", "emriyaI", "ssxnflower", "skyzif", "cythicial", "Di33le2", "Ripend", "r_qch", "Minix_dragon", "AyItsRachel", "n0tbsy", "Swanill", "lonelystreetcat", "frietim12", "Dipaus_1", "clisrespect"},
+    ["Default Banned"] = {"2cool2befaded", "6737x673", "jhjss", "ghostroblox570", "bcakroms2", "Let_emhanglow", "skittlemasher", "Brontinoa", "brghffdgj"},
     ["Default locked"] = {"Ghostcloudeartgirl", "dan_shack27", "iiPeachy"},
     ["Prefix"] = "-",
     }
-
 repeat wait() until game:IsLoaded()
-
-local owner = game.Players.LocalPlayer
-local player = owner
-local localplayer = owner
-local lp = owner
-local plr = owner
-local chr = owner.Character
-local character = owner.Character
-local char = owner.Character
-
--- Execute this obfuscated script instead if you want a better version of this playerlist https://raw.githubusercontent.com/Tech-187/Obfuscated-art/main/p%20pl%20v2
--- PlayerList:Destroy() will delete it now.
--- This playerlist originates from SCV2 old (Made by yeemi), that one may be more complete https://raw.githubusercontent.com/Tech-187/Lua-scripts/main/SCV2%20old
-
-game.StarterGui.ResetPlayerGuiOnSpawn = false
-
-function hasGamepass(plrId, id)
-    local plrData = game:HttpGet("https://inventory.roblox.com/v1/users/" .. plrId .. "/items/GamePass/" .. id)
-    local hasPerm = false
-    if string.match(plrData, tostring(id)) then
-        hasPerm = true
-    end
-    return hasPerm
-end
-
-PlayerList = Instance.new("ScreenGui")
-
-coroutine.wrap(function()
-        -- Instances:
-
-        local PlayerListMaster = Instance.new("Frame")
-        local SizeOffsetFrame = Instance.new("Frame")
-        local UIListLayout = Instance.new("UIListLayout")
-        local ScrollingFrameContainer = Instance.new("Frame")
-        local UIListLayout_2 = Instance.new("UIListLayout")
-
-        --Properties:
-
-        PlayerList.Name = "PlayerList"
-        PlayerList.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-        PlayerList.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-        PlayerList.DisplayOrder = 1
-
-        PlayerListMaster.Name = "PlayerListMaster"
-        PlayerListMaster.Parent = PlayerList
-        PlayerListMaster.AnchorPoint = Vector2.new(1, 0)
-        PlayerListMaster.BackgroundTransparency = 1.000
-        PlayerListMaster.Position = UDim2.new(1, -4, 0, 40)
-        PlayerListMaster.Size = UDim2.new(0, 166, 0.1, 0)
-
-        SizeOffsetFrame.Name = "SizeOffsetFrame"
-        SizeOffsetFrame.Parent = PlayerListMaster
-        SizeOffsetFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-        SizeOffsetFrame.BackgroundTransparency = 1.000
-        SizeOffsetFrame.Position = UDim2.new(0.5, 0, 0.881410241, 0)
-        SizeOffsetFrame.Size = UDim2.new(1, 0, 2.5, 0) -- {1, 0},{3.003, 0}
-
-        UIListLayout.Parent = SizeOffsetFrame
-        UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-
-        ScrollingFrameContainer.Name = "ScrollingFrameContainer"
-        ScrollingFrameContainer.Parent = SizeOffsetFrame
-        ScrollingFrameContainer.BackgroundColor3 = Color3.fromRGB(31, 33, 35)
-        ScrollingFrameContainer.BackgroundTransparency = 0.300
-        ScrollingFrameContainer.BorderSizePixel = 0
-        ScrollingFrameContainer.LayoutOrder = 3
-        ScrollingFrameContainer.Position = UDim2.new(0, 0, 0.0145454546, 0)
-        ScrollingFrameContainer.Size = UDim2.new(1, 0, 0.883456707, 40)
-
-        UIListLayout_2.Parent = ScrollingFrameContainer
-        UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
-
-        -- Scripts:
-
-        local function KTJYHGG_fake_script()
-            local script = Instance.new("LocalScript", ScrollingFrameContainer)
-
-            function addBox(isPerm, plrName, plrDisplay)
-                local PlayerHere = Instance.new("Frame")
-                local ChildrenFrame = Instance.new("Frame")
-                local NameFrame = Instance.new("Frame")
-                local DisplayName = Instance.new("Frame")
-                local PlayerName = Instance.new("TextLabel")
-                local SizeConstraint = Instance.new("UITextSizeConstraint")
-                local PermUI = Instance.new("Frame")
-                local PlayerName_2 = Instance.new("TextLabel")
-                local SizeConstraint_2 = Instance.new("UITextSizeConstraint")
-                local PlayerName_3 = Instance.new("Frame")
-                local PlayerName_4 = Instance.new("TextLabel")
-                local SizeConstraint_3 = Instance.new("UITextSizeConstraint")
-                local Layout = Instance.new("UIListLayout")
-
-                PlayerHere.Name = plrName
-                PlayerHere.Parent = script.Parent
-                PlayerHere.BackgroundTransparency = 1.000
-                PlayerHere.ClipsDescendants = true
-                PlayerHere.Size = UDim2.new(1, 0, 0.158816129, 0)
-
-                ChildrenFrame.Name = "ChildrenFrame"
-                ChildrenFrame.Parent = PlayerHere
-                ChildrenFrame.BackgroundTransparency = 1.000
-                ChildrenFrame.Size = UDim2.new(1, 0, 0, 40)
-
-                NameFrame.Name = "NameFrame"
-                NameFrame.Parent = ChildrenFrame
-                NameFrame.BackgroundTransparency = 1.000
-                NameFrame.Size = UDim2.new(0, 150, 0, 40)
-
-                DisplayName.Name = "DisplayName"
-                DisplayName.Parent = NameFrame
-                DisplayName.BackgroundTransparency = 1.000
-                DisplayName.LayoutOrder = 3
-                DisplayName.Position = UDim2.new(0.0799999982, 0, 0, 0)
-                DisplayName.Size = UDim2.new(0.639999986, -34, 1, 0)
-
-                PlayerName.Name = "PlayerName"
-                PlayerName.Parent = DisplayName
-                PlayerName.BackgroundTransparency = 1.000
-                PlayerName.Position = UDim2.new(0.439606011, 0, 0.704999983, 0)
-                PlayerName.Size = UDim2.new(1, 0, 0.439999998, 0)
-                PlayerName.Font = Enum.Font.GothamSemibold
-                PlayerName.Text = plrDisplay
-                PlayerName.TextColor3 = Color3.fromRGB(255, 255, 255)
-                PlayerName.TextScaled = true
-                PlayerName.TextSize = 14.000
-                PlayerName.TextWrapped = true
-                PlayerName.TextXAlignment = Enum.TextXAlignment.Left
-
-                SizeConstraint.Name = "SizeConstraint"
-                SizeConstraint.Parent = PlayerName
-                SizeConstraint.MaxTextSize = 14
-                SizeConstraint.MinTextSize = 9
-
-                PermUI.Name = "PermUI"
-                PermUI.Parent = NameFrame
-                PermUI.BackgroundTransparency = 1.000
-                PermUI.LayoutOrder = 3
-                PermUI.Position = UDim2.new(0.0799999982, 0, 0, 0)
-                PermUI.Size = UDim2.new(0.446666658, -34, 1, 0)
-
-                PlayerName_2.Name = "PlayerName"
-                PlayerName_2.Parent = PermUI
-                PlayerName_2.BackgroundTransparency = 1.000
-                PlayerName_2.Position = UDim2.new(0, 0, 0.280000001, 0)
-                PlayerName_2.Size = UDim2.new(1, 0, 0.439999998, 0)
-                PlayerName_2.Font = Enum.Font.GothamSemibold
-                PlayerName_2.Text = "    "
-                if isPerm then
-                    PlayerName_2.Text = "Perm"
-                end
-                PlayerName_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-                PlayerName_2.TextScaled = true
-                PlayerName_2.TextSize = 14.000
-                PlayerName_2.TextWrapped = true
-                PlayerName_2.TextXAlignment = Enum.TextXAlignment.Left
-
-                SizeConstraint_2.Name = "SizeConstraint"
-                SizeConstraint_2.Parent = PlayerName_2
-                SizeConstraint_2.MaxTextSize = 14
-                SizeConstraint_2.MinTextSize = 9
-
-                PlayerName_3.Name = "PlayerName"
-                PlayerName_3.Parent = NameFrame
-                PlayerName_3.BackgroundTransparency = 1.000
-                PlayerName_3.LayoutOrder = 3
-                PlayerName_3.Size = UDim2.new(1, -34, 1, 0)
-
-                PlayerName_4.Name = "PlayerName"
-                PlayerName_4.Parent = PlayerName_3
-                PlayerName_4.BackgroundTransparency = 1.000
-                PlayerName_4.Position = UDim2.new(0.422413796, 0, 0.280000001, 0)
-                PlayerName_4.Size = UDim2.new(1, 0, 0.439999998, 0)
-                PlayerName_4.Font = Enum.Font.GothamSemibold
-                PlayerName_4.Text = plrName
-                PlayerName_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-                PlayerName_4.TextScaled = true
-                PlayerName_4.TextSize = 14.000
-                PlayerName_4.TextWrapped = true
-                PlayerName_4.TextXAlignment = Enum.TextXAlignment.Left
-
-                SizeConstraint_3.Name = "SizeConstraint"
-                SizeConstraint_3.Parent = PlayerName_4
-                SizeConstraint_3.MaxTextSize = 14
-                SizeConstraint_3.MinTextSize = 9
-
-                Layout.Name = "Layout"
-                Layout.Parent = ChildrenFrame
-                Layout.FillDirection = Enum.FillDirection.Horizontal
-                Layout.SortOrder = Enum.SortOrder.Name
-                Layout.VerticalAlignment = Enum.VerticalAlignment.Center
-            end
-
-            game.StarterGui:SetCoreGuiEnabled("PlayerList", false)
-
-            game.Players.ChildRemoved:Connect(function(player)
-                    if script.Parent:FindFirstChild(player.Name) then
-                        script.Parent:FindFirstChild(player.Name):remove()
-                    end
-                end)
-
-            while wait(1) do
-                for _, plr in pairs(game.Players:GetChildren()) do
-                    if not script.Parent:FindFirstChild(plr.Name) then
-                        addBox(hasGamepass(plr.UserId, 66254), plr.Name, plr.DisplayName)
-                        task.wait()
-                    --script.Parent.Size = UDim2.new(0, 166, 0, (#script.Parent:GetChildren() - 1) * 50)
-                    end
-                end
-            end
-        end
-        coroutine.wrap(KTJYHGG_fake_script)()
-    end
-)()
-
 local loadtime = os.clock()
 local owner = game.Players.LocalPlayer
 local player = owner
@@ -256,16 +41,13 @@ local ServerLockedSound = ""
 local BanSoundsEnabled = true
 local BanSound = ""
 local CommandBar = nil
-
 function GetPlayers(jjk)
 local boss = lp
 local fat = {}
 if jjk:lower() == "me" then 
 return {boss} 
-
 elseif jjk:lower() == "all" or jjk:lower() == "*" then 
 return game:GetService("Players"):GetChildren() 
-
 elseif jjk:lower() == "others" then
 for i,v in pairs(game:GetService("Players"):GetChildren()) do
 if v.Name ~= boss.Name then
@@ -273,10 +55,8 @@ table.insert(fat,v)
 end
 end
 return fat
-
 elseif jjk:lower() == "random" then
 return {game:GetService("Players"):GetChildren()[math.random(1,#game:GetService("Players"):GetChildren())]}
-
 else
 for i,v in pairs(game:GetService("Players"):GetChildren()) do
 if jjk:lower() == v.Name:lower():sub(1,#jjk) and not table.find(fat,v) then
@@ -290,13 +70,10 @@ end
 end
 return fat
 end
-
 end
-
 function newcmd(name,args,func)
     table.insert(commandlist,{name,args,func})
 end
-
 function runCommand(param1,specargs)
     for i,asdfuhiswuejfniuserf in pairs(commandlist) do
         if prefix..asdfuhiswuejfniuserf[1] == param1 and running then
@@ -313,7 +90,6 @@ end)
         end
     end
 end
-
 function getCommand(param1)
     local fat={}
     for i,v in pairs(commandlist) do
@@ -323,7 +99,6 @@ function getCommand(param1)
         end
     return fat
 end
-
 newcmd("cmds",{},function()
     if consoleOn then print("-:COMMANDS ["..tostring(#commandlist).."]:-") end
     for i,v in pairs(commandlist) do
@@ -332,12 +107,9 @@ newcmd("cmds",{},function()
         if consoleOn then print(v[1].." "..lister)end
     end
     end)
-
 newcmd("prefix",{"newprefix"},function(args)
     prefix = args[1]
 end)
-
-
 newcmd("antigear",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
@@ -346,7 +118,6 @@ newcmd("antigear",{"player"},function(args)
         end)
     end
 end)
-
 newcmd("dantigear",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
@@ -355,7 +126,6 @@ newcmd("dantigear",{"player"},function(args)
         end)
     end
 end)
-
 newcmd("ban",{"player"},function(args)
     for i,v in pairs(GetPlayers(args[1])) do
         table.insert(Banned,v.Name)
@@ -366,18 +136,6 @@ newcmd("ban",{"player"},function(args)
         end
     end
 end)
-
-newcmd("ban2",{"player"},function(args)
-    for i,v in pairs(GetPlayers(args[1])) do
-        table.insert(Banned2,v.Name)
-        if BanSoundsEnabled then
-            runCommand(prefix.."kick",{v.Name,BanSound})
-        else
-            runCommand(prefix.."kick2",{v.Name})
-        end
-    end
-end)
-
 newcmd("lock",{"player"},function(args)
     Loops.lock = true
     repeat wait()
@@ -389,11 +147,11 @@ newcmd("lock",{"player"},function(args)
         end
         if v:DistanceFromCharacter(v.Character.Torso.Position)>1 then
         game.Players:Chat("freeze "..v.Name)
-        wait(.23)
+        task.wait(.23)
         game.Players:Chat("name "..v.Name.." 🤓 YOU ARE LOCKED (LOL) 🤓")
-        wait(.23)
+        task.wait(.23)
         game.Players:Chat("thaw "..v.Name)
-        wait(.5)
+        task.wait(.5)
         game.Players:Chat("size "..v.Name.." .3")
         game.Players:Chat("size "..v.Name.." .3")
         game.Players:Chat("size "..v.Name.." .3")
@@ -403,19 +161,16 @@ newcmd("lock",{"player"},function(args)
         end)
     end
     until not Loops.lock
-
 end)
-
 newcmd("unlock",{"player"},function(args)
     Loops.lock = false
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
         game.Players:Chat("respawn "..v.Name)
-        wait(.5)
+        task.wait(.5)
         game.Players:Chat("tp "..v.Name.." me")
 end
 end)
-
 newcmd("unban",{"player"},function(args)
     for i,v in pairs(Player) do
         if table.find(Banned,v.Name) then
@@ -424,27 +179,20 @@ newcmd("unban",{"player"},function(args)
     end
 end)
 
-newcmd("unban2",{"player"},function(args)
-    for i,v in pairs(Player) do
-        if table.find(Banned2,v.Name) then
-            table.remove(Banned2,table.find(Banned2,v.Name))
-        end
-    end
+newcmd("wlcmds",{},function()
+    game.Players:Chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTHIS SCRIPT WAS MADE BY PERSONALISATION (CXO / RIPCXO)\nPREFIX IS -\n________________________________________\n\nCOMMANDS:\nlock / unlock *player* - softlocks a player\nstop *player* - anchors a player in place\nbend / bend2 *player*\nfur / furry *player* - turns the player into a furry\nangrybird *player* - turns player into an angrybird\nsuperman *player* - turns the player into superman\nbatman *player* - turns player into batman\nnerd *player* - 🤓\nhorse / unicorn *player* - turns the player into a horse or unicorn\npotato *player* - turns the player into a potato\nbird *player* - turns the player into a bird\ncube *player* - turns the player into a cube\nowner / rachel / isley / aria *player* - turns the player into cxo rachel isley or aria\nchimney *player* - teleports a player to the chimney\nfixbp - fixes the baseplate\nmovebox - moves the obby box")
+    game.Players:Chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nwlcrash - !!THIS WILL SHUT DOWN THE SERVER!!\ndcrash - dogcrashes the server !!THIS WILL SHUT THE SERVER DOWN!!\npcrash - persons crashes the server !!THIS WILL SHUT THE SERVER DOWN!!\nvgcrash - uses the vampire vanquisher to close the server !!THIS WILL SHUT THE SERVER DOWN!!\ntools *player* - gives a bunch of tools\npb *player* - gives the player a paintbucket\nbtools *player* - gives player btools\nkick *player* - kicks a player from the server\nban *player* - bans a player from the server\nregen - regens the admin pads\ntrapspawn - traps the obby box (spawnpoint)\ncl / cls - clears the logs\ncat *player* - turns player into a cat (if you see aria use this command on her)\nvending *player* turns player into a vending machine\nfridge *player* - turns player into a fridge")
+    game.Players:Chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmovespawns - moves the spawnpoints\nfixregen - fixes the regen pad if it is located\ntemi *player* - encages the player\ngban *player* - gearbans the player\nwl / unwl *player* - allows you to whitelist / unwhitelist players\nmbc *player* - breaks a mobile players camera\ndrc - disables the right click for everyone\ngames *player* - gives a player games\nage *player* - fetches the age in days of a players roblox account\nheaven / darkness\ndie *player* - rest  in peace\nlag / dlag *player* - attempts to lag the players game\nclone *player* - attaches the player to a clone of themself")
 end)
 
-newcmd("wlcmds",{},function()
-game.Players:Chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTHIS SCRIPT WAS MADE BY PERSONALISATION (CXO / XVOQSV) \n PREFIX IS - \n________________________________________ \n\n COMMANDS: \n antigear (player) / dantigear (player) - disallows a player of your choice to use gears\n ban (player) / unban (player) - bans a player from the server\n lock (player) / unlock (player) - locks a player in position\n regen - regens the admin pads\n lg / dlg - forces the pads to be loopgrabbed by me\n padlock / dpadlock - locks the pads")
-    end)
-
     newcmd("spiders",{},function()
-        wait(.5)
+        task.wait(.5)
     for i = 1,100 do
         game.Players:Chat("gear me 0000000000000000000000000000000000000116040789")
-        wait(.5)
+        task.wait(.5)
         game.Players:Chat("-usetools")
         end
         end)
-
 newcmd("blackpink",{},function()
     -- Roblox ColorAPI, Thank you siyamicik and Kevin (bumanoid) for recovering/improving this
 -- https://mega.nz/file/XHZXzZba#nH1GKXeckVSvLT4vOjPXh-HzP7TolaJkIfHvYhid1L0 Original API Archived (thanks to siya again)
@@ -478,6 +226,23 @@ colorAPI.colorObbyBox = function(color) -- Default is "Teal"
 	for i,v in pairs(game.Workspace.Terrain["_Game"].Workspace["Obby Box"]:GetChildren()) do
 		colorAPI.color(v, color) -- colorAPI.transformToColor3(BrickColor.new("Bright red"))
 	end
+
+    
+          
+            
+    
+
+          
+          Expand Down
+          
+            
+    
+
+          
+          Expand Up
+    
+    @@ -2865,27 +2867,26 @@
+  
 end
  
 colorAPI.colorObbyBricks = function(color)-- Default is "Really red"
@@ -497,7 +262,6 @@ colorAPI.colorPads = function(color)-- Default is "Bright green"
 		colorAPI.color(v.Head, color)
 	end
 end
-
 colorAPI.colorRegen = function(color)-- Default is "Bright violet"
 	for i,v in pairs(game.Workspace.Terrain["_Game"].Admin["Regen"]:GetChildren()) do
 		colorAPI.color(v, color)
@@ -627,7 +391,6 @@ end)
 spawn(function()
 	colorAPI.colorRegen(colorAPI.transformToColor3(BrickColor.new("Bright violet")))
 end)
-
 spawn(function()
 	colorAPI.colorPads(colorAPI.transformToColor3(BrickColor.new("Bright green")))
 end)
@@ -659,7 +422,6 @@ spawn(function()
         regenC = colorAPI.transformToColor3(BrickColor.new("Bright violet"))
 	})
 end)
-
 ]]--
  
 -------------------------------------------------------------------- BASIC API STUFF HERE --------------------------------------------------------------------
@@ -709,7 +471,6 @@ end)
 game.Players:Chat("ungear me "..math.random(999))
 --nil
 end)
-
 newcmd("white",{},function()
     -- Roblox ColorAPI, Thank you siyamicik and Kevin (bumanoid) for recovering/improving this
 -- https://mega.nz/file/XHZXzZba#nH1GKXeckVSvLT4vOjPXh-HzP7TolaJkIfHvYhid1L0 Original API Archived (thanks to siya again)
@@ -762,7 +523,6 @@ colorAPI.colorPads = function(color)-- Default is "Bright green"
 		colorAPI.color(v.Head, color)
 	end
 end
-
 colorAPI.colorRegen = function(color)-- Default is "Bright violet"
 	for i,v in pairs(game.Workspace.Terrain["_Game"].Admin["Regen"]:GetChildren()) do
 		colorAPI.color(v, color)
@@ -892,7 +652,6 @@ end)
 spawn(function()
 	colorAPI.colorRegen(colorAPI.transformToColor3(BrickColor.new("Bright violet")))
 end)
-
 spawn(function()
 	colorAPI.colorPads(colorAPI.transformToColor3(BrickColor.new("Bright green")))
 end)
@@ -924,7 +683,6 @@ spawn(function()
         regenC = colorAPI.transformToColor3(BrickColor.new("Bright violet"))
 	})
 end)
-
 ]]--
  
 -------------------------------------------------------------------- BASIC API STUFF HERE --------------------------------------------------------------------
@@ -977,11 +735,8 @@ end)
 game.Players:Chat("ungear me "..math.random(999))
 --nil
 end)
-
 newcmd("fp",{},function()
-
     colorAPI = {}
-
     colorAPI.color = function(Part, color)
         local thread = coroutine.create(function() -- x3.5 speed boost
             local Arguments =
@@ -1233,7 +988,6 @@ newcmd("fp",{},function()
     game.Players:Chat("ungear me"..math.random(999))
     --nil
 end)
-
 newcmd("if",{"input","then/else","output"},function(args)
 	local input = false
 	if args[1]:lower() == "iscrashed" then input=checkIsCrashed() end
@@ -1246,11 +1000,9 @@ newcmd("if",{"input","then/else","output"},function(args)
 		runCommand(prefix..args[3],fixer)
 	end
 end)
-
 newcmd("regen",{},function()
     fireclickdetector(game:GetService("Workspace").Terrain["_Game"].Admin.Regen.ClickDetector)
 end)
-
 newcmd("lg",{},function()
     Loops.autoadmin = true
     repeat game:GetService("RunService").RenderStepped:Wait()
@@ -1261,15 +1013,12 @@ newcmd("lg",{},function()
         end
     until not Loops.autoadmin
 end)
-
 newcmd("dlg",{},function()
     Loops.autoadmin = false
 end)
-
 newcmd("stoplg",{},function()
     Loops.autoadmin = false
 end)
-
 newcmd("perm",{},function()
     Loops.perm = true
     repeat game:GetService("RunService").RenderStepped:Wait()
@@ -1291,12 +1040,9 @@ newcmd("perm",{},function()
         end
     until not Loops.perm
 end)
-
 newcmd("dperm",{},function()
     Loops.perm = false
 end)
-
-
 newcmd("padlock",{},function()
     fireclickdetector(game:GetService("Workspace").Terrain["_Game"].Admin.Regen.ClickDetector)
     Loops.padslock = true
@@ -1313,17 +1059,14 @@ newcmd("padlock",{},function()
         end
     until not Loops.padslock
 end)
-
 newcmd("dpadlock",{},function()
     game.Players:Chat("h \n\n\n\n\n\n\n\n\n\n\n pads have been unlocked.")
     Loops.padslock = false
 end)
-
 newcmd("unplock",{},function()
     game.Players:Chat("h \n\n\n\n\n\n\n\n\n\n\n pads have been unlocked.")
     Loops.padslock = false
 end)
-
 newcmd("1pad",{},function()
     Loops.onepad = true
     repeat game:GetService("RunService").RenderStepped:Wait()
@@ -1350,11 +1093,9 @@ newcmd("1pad",{},function()
         end)
     until not Loops.onepad
 end)
-
 newcmd("d1pad",{},function()
     Loops.onepad = false
 end)
-
 newcmd("padprot",{},function()
     Loops.onepad = true
     repeat game:GetService("RunService").RenderStepped:Wait()
@@ -1381,11 +1122,9 @@ newcmd("padprot",{},function()
         end)
     until not Loops.onepad
 end)
-
 newcmd("dpadprot",{},function()
     Loops.onepad = false
 end)
-
 newcmd("unexec",{},function()
     spawn(function()
         if game.Chat:FindFirstChild("Obby") then runCommand(prefix.."disable",{}) end
@@ -1395,7 +1134,6 @@ newcmd("unexec",{},function()
     for i,v in pairs(Loops) do Loops[i]=false end
     CommandBar:Destroy()
 end)
-
 function moveObject(target,wawawaa)
     function equipivory()
     	if lp.Backpack:FindFirstChild("IvoryPeriastron") then
@@ -1449,84 +1187,82 @@ function moveObject(target,wawawaa)
 		lp.Character.IvoryPeriastron.Remote:FireServer(Enum.KeyCode.E)		
 	end
 end
-
 newcmd("spawnkill",{},function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-41.80, 5.08, -25.59)
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump,CFrame.new(-41.80, 5.08, -25.59))
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump,CFrame.new(-41.80, 5.08, -25.59))
-wait(.39)
+task.wait(.39)
 game.Players:Chat("respawn me")
-wait(.90)
+task.wait(.90)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-54.47, 5.10, -25.59)
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump1,CFrame.new(-41.80, 5.08, -25.59))
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump1,CFrame.new(-41.80, 5.08, -25.59))
-wait(.39)
+task.wait(.39)
 game.Players:Chat("respawn me")
-wait(.90)
+task.wait(.90)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-30.13, 5.10, -25.59)
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump2,CFrame.new(-30.13, 5.10, -25.59))
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump2,CFrame.new(-30.13, 5.10, -25.59))
-wait(.39)
+task.wait(.39)
 game.Players:Chat("respawn me")
-wait(.90)
+task.wait(.90)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-53.00, 8.66, -25.59)
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump3,CFrame.new(-53.00, 8.66, -25.59))
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump3,CFrame.new(-53.00, 8.66, -25.59))
-wait(.39)
+task.wait(.39)
 game.Players:Chat("respawn me")
-wait(.90)
+task.wait(.90)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-41.00, 9.92, -25.59)
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump4,CFrame.new(-41.00, 9.92, -25.59))
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump4,CFrame.new(-41.00, 9.92, -25.59))
-wait(.39)
+task.wait(.39)
 game.Players:Chat("respawn me")
-wait(.90)
+task.wait(.90)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-29.00, 8.67, -25.59)
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump5,CFrame.new(-29.00, 8.67, -25.59))
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump5,CFrame.new(-29.00, 8.67, -25.59))
-wait(.39)
+task.wait(.39)
 game.Players:Chat("respawn me")
 end)
-
 newcmd("blockhouse",{},function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-43.5836868, 7.98999834, 45.9412842, -0.0165381227, 8.78844233e-08, -0.999863207, -7.63925172e-08, 1, 8.91600038e-08, 0.999863207, 7.78566047e-08, -0.0165381227)
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump,CFrame.new(-43.5836868, 7.98999834, 45.9412842, -0.0165381227, 8.78844233e-08, -0.999863207, -7.63925172e-08, 1, 8.91600038e-08, 0.999863207, 7.78566047e-08, -0.0165381227))
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump,CFrame.new(-43.5836868, 7.98999834, 45.9412842, -0.0165381227, 8.78844233e-08, -0.999863207, -7.63925172e-08, 1, 8.91600038e-08, 0.999863207, 7.78566047e-08, -0.0165381227))
-wait(.39)
+task.wait(.39)
 game.Players:Chat("unpaint me")
-wait(.23)
+task.wait(.23)
 game.Players:Chat("respawn me")
-wait(.90)
+task.wait(.90)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21.475708, 10.4733601, 45.1076469, -0.0307416786, -0.000306325674, -0.999527335, -0.000312381395, 0.999999881, -0.000296862854, 0.999527335, 0.000303107692, -0.0307417698)
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump1,CFrame.new(-21.475708, 10.4733601, 45.1076469, -0.0307416786, -0.000306325674, -0.999527335, -0.000312381395, 0.999999881, -0.000296862854, 0.999527335, 0.000303107692, -0.0307417698))
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump1,CFrame.new(-21.475708, 10.4733601, 45.1076469, -0.0307416786, -0.000306325674, -0.999527335, -0.000312381395, 0.999999881, -0.000296862854, 0.999527335, 0.000303107692, -0.0307417698))
-wait(.39)
+task.wait(.39)
 game.Players:Chat("respawn me")
-wait(.90)
+task.wait(.90)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2.8050549, 10.4706678, 58.7260361, -0.999954462, -0.000326677895, 0.00953910127, -0.00033469437, 0.999999583, -0.000838798354, -0.00953882374, -0.00084195286, -0.999954164)
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump2,CFrame.new(-2.8050549, 10.4706678, 58.7260361, -0.999954462, -0.000326677895, 0.00953910127, -0.00033469437, 0.999999583, -0.000838798354, -0.00953882374, -0.00084195286, -0.999954164))
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump2,CFrame.new(-2.8050549, 10.4706678, 58.7260361, -0.999954462, -0.000326677895, 0.00953910127, -0.00033469437, 0.999999583, -0.000838798354, -0.00953882374, -0.00084195286, -0.999954164))
-wait(.39)
+task.wait(.39)
 game.Players:Chat("respawn me")
-wait(.90)
+task.wait(.90)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2.91342425, 10.4692116, 80.7573395, -0.999721348, -0.000482328149, 0.0236017052, -0.000489439175, 0.999999821, -0.000295518752, -0.0236015599, -0.000306987989, -0.999721408)
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump3,CFrame.new(-2.91342425, 10.4692116, 80.7573395, -0.999721348, -0.000482328149, 0.0236017052, -0.000489439175, 0.999999821, -0.000295518752, -0.0236015599, -0.000306987989, -0.999721408))
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump3,CFrame.new(-2.91342425, 10.4692116, 80.7573395, -0.999721348, -0.000482328149, 0.0236017052, -0.000489439175, 0.999999821, -0.000295518752, -0.0236015599, -0.000306987989, -0.999721408))
-wait(.39)
+task.wait(.39)
 game.Players:Chat("respawn me")
-wait(.90)
+task.wait(.90)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-16.556757, 10.4671173, 99.4871597, 0.0304290019, -0.00107705768, 0.999536335, -0.000905117078, 0.999998987, 0.00110511074, -0.999536514, -0.00093832484, 0.0304279961)
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump4,CFrame.new(-16.556757, 10.4671173, 99.4871597, 0.0304290019, -0.00107705768, 0.999536335, -0.000905117078, 0.999998987, 0.00110511074, -0.999536514, -0.00093832484, 0.0304279961))
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump4,CFrame.new(-16.556757, 10.4671173, 99.4871597, 0.0304290019, -0.00107705768, 0.999536335, -0.000905117078, 0.999998987, 0.00110511074, -0.999536514, -0.00093832484, 0.0304279961))
-wait(.39)
+task.wait(.39)
 game.Players:Chat("respawn me")
-wait(.90)
+task.wait(.90)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-38.6766663, 10.4686985, 99.1848602, 0.0165387839, -0.00240235357, 0.999860346, 7.39387106e-05, 0.999997139, 0.00240145926, -0.999863207, 3.42111671e-05, 0.0165380143)
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump5,CFrame.new(-38.6766663, 10.4686985, 99.1848602, 0.0165387839, -0.00240235357, 0.999860346, 7.39387106e-05, 0.999997139, 0.00240145926, -0.999863207, 3.42111671e-05, 0.0165380143))
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump5,CFrame.new(-38.6766663, 10.4686985, 99.1848602, 0.0165387839, -0.00240235357, 0.999860346, 7.39387106e-05, 0.999997139, 0.00240145926, -0.999863207, 3.42111671e-05, 0.0165380143))
-wait(.39)
+task.wait(.39)
 game.Players:Chat("respawn me")
-wait(.90)
+task.wait(.90)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-56.7733727, 10.4716101, 85.5594101, 0.999827206, 8.33357481e-05, 0.0185900331, -3.94415256e-05, 0.999997199, -0.00236152369, -0.0185901783, 0.00236038235, 0.999824405)
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump6,CFrame.new(-56.7733727, 10.4716101, 85.5594101, 0.999827206, 8.33357481e-05, 0.0185900331, -3.94415256e-05, 0.999997199, -0.00236152369, -0.0185901783, 0.00236038235, 0.999824405))
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump6,CFrame.new(-56.7733727, 10.4716101, 85.5594101, 0.999827206, 8.33357481e-05, 0.0185900331, -3.94415256e-05, 0.999997199, -0.00236152369, -0.0185901783, 0.00236038235, 0.999824405))
@@ -1539,7 +1275,6 @@ moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump7
 wait(.39)
 game.Players:Chat("respawn me")
 end)
-
 newcmd("movebox",{},function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-145.78, 5.17, 26.58)
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby Box"]["Back Wall"],CFrame.new(-145.78, 5.17, 26.58))
@@ -1601,7 +1336,6 @@ game.Players:Chat("unpaint me")
 wait(.39)
 game.Players:Chat("respawn me")
 end)
-
 newcmd("moveblocks",{},function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-127.248085, 1.69787991, 12.0981798, -0.00109732349, -0.000463130855, -0.999999285, 9.48771049e-05, 0.999999881, -0.000463235221, 0.999999404, -9.53853596e-05, -0.00109727948)
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump,CFrame.new(-127.248085, 1.69787991, 12.0981798, -0.00109732349, -0.000463130855, -0.999999285, 9.48771049e-05, 0.999999881, -0.000463235221, 0.999999404, -9.53853596e-05, -0.00109727948))
@@ -1626,9 +1360,7 @@ moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump3
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump3,CFrame.new(-127.236313, 3.69999933, -5.83323193, 0, 0, -1, 0, 1, 0, 1, 0, 1, 0, 0))
 wait(.39)
 game.Players:Chat("respawn me")
-
 end)
-
 newcmd("trapspawn",{},function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-58.98, 36.80, -14.36)
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Basic House"].SmoothBlockModel38,CFrame.new(-58.98, 36.80, -14.36))
@@ -1644,22 +1376,19 @@ game.Players:Chat("seizure me")
 wait(.39)
 game.Players:Chat("respawn me")
 end)
-
 newcmd("disable",{},function()
     print("script unexecuted!")
 end)
-
 newcmd("aobby",{},function()
     game.Chat:FindFirstChild("Obby").Parent = workspace.Terrain["_Game"]["Workspace"]
     game.Chat:FindFirstChild("Obby Box").Parent = workspace.Terrain["_Game"]["Workspace"]
 end)
-
 newcmd("fur",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
         game.Players:Chat("unhat "..v.Name)
         game.Players:Chat("unpackage "..v.Name)
-        wait(0.000000000000000000000000000001)
+        task.wait(0.000000000000000000000000000001)
         game.Players:Chat("paint "..v.Name.." white")
         game.Players:Chat("hat "..v.Name.." 00000000000000000000000000000000012865590111")
         game.Players:Chat("hat "..v.Name.." 0000000000000000000000000000000007485988593")
@@ -1667,13 +1396,12 @@ newcmd("fur",{"player"},function(args)
         game.Players:Chat("pants "..v.Name.." 0000000000000000000000000000000007344865534")
     end
 end)
-
 newcmd("superman",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
-        wait(0.5)
+        task.wait(0.5)
         game.Players:Chat("char "..v.Name.." 4753921187")
-        wait(0.000000000000000000000000001)
+        task.wait(0.000000000000000000000000001)
         game.Players:Chat("shirt "..v.Name.." 00000000000000000000000000000000011427337204")
         game.Players:Chat("pants "..v.Name.." 00000000000000000000000000000000011427412795")
         game.Players:Chat("cape "..v.Name.." superman")
@@ -1681,17 +1409,15 @@ newcmd("superman",{"player"},function(args)
         game.Players:Chat("tp "..v.Name.." me")
     end
 end)
-
 newcmd("angrybird",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
         game.Players:Chat("paint "..v.Name.." red")
         game.Players:Chat("unhat "..v.Name)
-        wait(0.0000000000000000000000000000000000000000000000000000001)
+        task.wait(0.0000000000000000000000000000000000000000000000000000001)
         game.Players:Chat("hat "..v.Name.." 0000000000000000000000000000000000000413657049")
     end
 end)
-
 newcmd("horse",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
@@ -1702,7 +1428,6 @@ newcmd("horse",{"player"},function(args)
         game.Players:Chat("size "..v.Name.." 2")     
 end
 end)
-
 newcmd("unicorn",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
@@ -1715,28 +1440,22 @@ newcmd("unicorn",{"player"},function(args)
         game.Players:Chat("particle "..v.Name.." c")
 end
 end)
-
-
 newcmd("potato",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
         game.Players:Chat("invis "..v.Name)
         game.Players:Chat("hat "..v.Name.." 00000000000000000000000000006741585898")
         game.Players:Chat("size "..v.Name.." 2")     
-
 end
 end)
-
 newcmd("bird",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
         game.Players:Chat("invis "..v.Name)
         game.Players:Chat("hat "..v.Name.." 000000000000000000000000000013582821027")
         game.Players:Chat("size "..v.Name.." 2")     
-
 end
 end)
-
 newcmd("cube",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
@@ -1759,11 +1478,9 @@ newcmd("cube",{"player"},function(args)
         game.Players:Chat("size "..v.Name.." 2")
 end
 end)
-
 newcmd("musiclock",{"sound-id"},function(args)
     local s,f=pcall(function()
     local soundlock = tonumber(args[1])
-
 local origsound = soundlock
 soundlock="http://www.roblox.com/asset/?id="..tostring(soundlock)
 Loops.musiclock = true
@@ -1789,7 +1506,11 @@ repeat wait(0.1) gwawg = gwawg + 0.1
 until not Loops.musiclock
 end) if not s then print(f)end
 end)
-
+newcmd("cls",{},function()
+for i = 1,250 do
+game.Players:Chat("ff ")
+end
+end)
 newcmd("ddisplays",{},function()
     local function characterAdded(charass)
         spawn(function()
@@ -1814,7 +1535,6 @@ newcmd("ddisplays",{},function()
     Connections["RDN"..player.Name]=player.CharacterAdded:Connect(characterAdded)
     end) end)
 end)
-
 newcmd("displays",{},function()
     Connections.removedisplaynames:Disconnect()
     for i,v in pairs(Connections) do
@@ -1829,7 +1549,6 @@ newcmd("displays",{},function()
         end)
     end
 end)
-
 newcmd("c12121212121212121",{"r","g","b"},function(args)
     local Paint = GetPaint()
 		for i,v in pairs(game.Workspace:GetDescendants()) do
@@ -1843,7 +1562,6 @@ newcmd("c12121212121212121",{"r","g","b"},function(args)
 				end
 		end
 end)
-
 newcmd("randomizeiqiqiqiqiqiqqi9191911",{},function()
     local Paint = GetPaint()
 		for i,v in pairs(game.Workspace:GetDescendants()) do
@@ -1857,7 +1575,6 @@ newcmd("randomizeiqiqiqiqiqiqqi9191911",{},function()
 				end
 		end
 end)
-
 newcmd("colorallbrickcuminmypussy8181olor",{"brickcolor"},function(args)
     local Paint = GetPaint()
     local fixer = args[1]
@@ -1881,7 +1598,6 @@ newcmd("colorallbrickcuminmypussy8181olor",{"brickcolor"},function(args)
 				end
 		end
 end)
-
 newcmd("cf",{},function()
     local ObbyDestroyed = false
     spawn(function()
@@ -1908,11 +1624,7 @@ local v1 = "PaintPart"
 				end
 			end)
 		end
-
-
 		--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 		for i,v in pairs(game.Workspace.Terrain["_Game"].Workspace["Admin Dividers"]:GetChildren()) do
 			spawn(function()
 				if v:IsA("Part") then
@@ -1925,11 +1637,7 @@ local v1 = "PaintPart"
 				end
 			end)
 		end
-
-
 		--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 		for i,v in pairs(game.Workspace.Terrain["_Game"].Workspace["Basic House"]:GetDescendants()) do
 			if v:IsA("Part") then
 				spawn(function()
@@ -2007,11 +1715,7 @@ local v1 = "PaintPart"
 				end)
 			end
 		end
-
-
 		--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 		for i,v in pairs(game.Workspace.Terrain["_Game"].Workspace["Building Bricks"]:GetDescendants()) do
 			if v:IsA("Part") then
 				spawn(function()
@@ -2098,11 +1802,7 @@ local v1 = "PaintPart"
 				end)
 			end
 		end
-
-
 		--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 		for i,v in pairs(game.Workspace.Terrain["_Game"].Workspace.Obby:GetChildren()) do
 			spawn(function()
 				if v:IsA("Part") then
@@ -2130,7 +1830,6 @@ end)
 wait(1.5)
 			if ObbyDestroyed then runCommand(prefix.."localremoveobby",{}) end
 end)
-
 newcmd("m",{"player"},function(args)
     Loops.mute = true
     repeat 
@@ -2139,62 +1838,55 @@ newcmd("m",{"player"},function(args)
     end
     until not Loops.mute
 end)
-
 newcmd("dm",{},function()
     Loops.mute = false
 end)
-
-newcmd("fur2",{"player"},function(args)
+newcmd("furry",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
         game.Players:Chat("char "..v.Name.." 00000000000000000000000000003221")  
-        wait(.23) 
+        task.wait(.23) 
         game.Players:Chat("tp "..v.Name.." me")  
 end
 end)
-
 newcmd("rachel",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
         game.Players:Chat("char "..v.Name.." 0000000000000000000000000000567455700")  
-        wait(.23) 
+        task.wait(.23) 
         game.Players:Chat("tp "..v.Name.." me")  
 end
 end)
-
 newcmd("aria",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
         game.Players:Chat("char "..v.Name.." 00000000000000000000000000002781438808")  
-        wait(.23) 
+        task.wait(.23) 
         game.Players:Chat("tp "..v.Name.." me")  
 end
 end)
-
 newcmd("clone",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
     game.Players:Chat("speed "..v.Name.." 0")
     game.Players:Chat("setgrav "..v.Name.." 3000")
     game.Players:Chat("punish "..v.Name)  
-    wait(.23)
+    task.wait(.23)
     game.Players:Chat("clone "..v.Name)  
-    wait(.23) 
+    task.wait(.23) 
     game.Players:Chat("unpunish "..v.Name)  
     game.Players:Chat("speed "..v.Name.." 16")
     game.Players:Chat("setgrav "..v.Name.." 0")
 end
 end)
-
 newcmd("isley",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
         game.Players:Chat("char "..v.Name.." 00000000000000000000000000001775910424")  
-        wait(.23) 
+        task.wait(.23) 
         game.Players:Chat("tp "..v.Name.." me")  
 end
 end)
-
 newcmd("cat",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
@@ -2204,70 +1896,61 @@ newcmd("cat",{"player"},function(args)
         game.Players:Chat("hat "..v.Name.." 000000000000000000000000000012318953833")  
 end
 end)
-
 newcmd("vending",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
         game.Players:Chat("invis "..v.Name)
         game.Players:Chat("hat "..v.Name.." 000000000000000000000000000013003828893")
         game.Players:Chat("size "..v.Name.." 2")     
-
 end
 end)
-
 newcmd("bend2",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
 game.Players:Chat("seizure "..v.Name)
 game.Players:Chat("reset "..v.Name)
-wait(.80)
+task.wait(.80)
 game.Players:Chat("freeze "..v.Name)
-wait(.23)
+task.wait(.23)
 game.Players:Chat("name "..v.Name.." "..v.DisplayName)
-wait(.34)
+task.wait(.34)
 game.Players:Chat("thaw "..v.Name)
 game.Players:Chat("sit "..v.Name)
 end
 end)
-
 newcmd("bend",{"player"},function(args)
 local Player = GetPlayers(args[1])
 for i,v in pairs(Player) do
 game.Players:Chat("rocket/"..v.Name)
-wait(.5)
+task.wait(.5)
 game.Players:Chat("freeze "..v.Name)
 game.Players:Chat("unrocket/"..v.Name)
-wait(.34)
+task.wait(.34)
 game.Players:Chat("name "..v.Name.." "..v.DisplayName)
-wait(.34)
+task.wait(.34)
 game.Players:Chat("thaw "..v.Name)
-wait(.34)
+task.wait(.34)
 game.Players:Chat("unseizure "..v.Name)
 game.Players:Chat("tp "..v.Name.." "..v.Name)
 game.Players:Chat("sit "..v.Name)
 end
 end)
-
 newcmd("btools",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
         game.Players:Chat("gear "..v.Name.." 00000000000000000000000000000016200204")
         game.Players:Chat("gear "..v.Name.." 00000000000000000000000000000016200402")
         game.Players:Chat("gear "..v.Name.." 00000000000000000000000000000016969792")     
-
 end
 end)
-
 newcmd("fridge",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
         game.Players:Chat("invis "..v.Name)
         game.Players:Chat("hat "..v.Name.." 00000000000000000000000000004821809630")
         game.Players:Chat("size "..v.Name.." 2")     
-
 end
 end)
-
 newcmd("loud",{"amount"},function(args)
     for i=1,tonumber(args[1])do
 game.Players:Chat("gear me 000000000000000000000000000000000000000000059848474")
@@ -2288,11 +1971,9 @@ for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
     end
 end
 end)
-
 newcmd("dantis",{},function()
 Loops.antiabuse = false
 end)
-
 newcmd("antis",{},function()
     Loops.antiabuse = true
     repeat game:GetService("RunService").RenderStepped:Wait() pcall(function()
@@ -2336,7 +2017,6 @@ newcmd("antis",{},function()
         end
     end)until not Loops.antiabuse
 end)
-
 newcmd("a",{},function()
     Loops.antikick = true
     repeat game:GetService("RunService").RenderStepped:Wait() pcall(function()
@@ -2358,7 +2038,6 @@ newcmd("a",{},function()
     end
     end)until not Loops.antikick
 end)
-
 newcmd("novamp",{},function()
     Loops.novamp = true
     repeat game:GetService("RunService").RenderStepped:Wait() pcall(function()
@@ -2372,17 +2051,14 @@ newcmd("novamp",{},function()
         spawn(function()
             if v.Backpack:FindFirstChild("VampireVanquisher") then v.Backpack:FindFirstChild("VampireVanquisher"):Destroy() game.Players:Chat("ungear "..v.Name)game.Players:Chat("ungear "..v.Name)game.Players:Chat("ungear "..v.Name)game.Players:Chat("ungear "..v.Name)game.Players:Chat("reset "..v.Name)game.Players:Chat("reset "..v.Name)game.Players:Chat("reset "..v.Name)game.Players:Chat("reset "..v.Name)
                 game.Players:Chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Sorry "..v.Name.." but you arent allowed the vampire vanquisher due to protection")
-
             end
         end)
     end
     end)until not Loops.novamp
 end)
-
 newcmd("dnovamp",{},function()
     Loops.novamp = false
 end)
-
 newcmd("noclip",{},function()
     Loops.noclip = true
     repeat game:GetService("RunService").Stepped:Wait()
@@ -2395,11 +2071,19 @@ newcmd("noclip",{},function()
 		end)
     until not Loops.noclip
 end)
-
 newcmd("clip",{},function()
     Loops.noclip = false
 end)
-
+newcmd("carlag",{},function()
+    for i = 1,275 do
+game.Players:Chat("unchar all all all")
+end
+wait(13)
+for i = 1,1000 do
+game:GetService("RunService").RenderStepped:Wait()
+game.Players:Chat("gear others 000000000000000000000000000000000000000000000000000000000000000000000000253519495")
+end
+end)
 newcmd("god",{},function()
     Loops.autogod = true
     repeat game:GetService("RunService").RenderStepped:Wait()
@@ -2412,12 +2096,10 @@ newcmd("god",{},function()
         end)
     until not Loops.autogod
 end)
-
 newcmd("dgod",{},function()
     Loops.autogod = false
     game.Players:Chat("ungod me")
 end)
-
 newcmd("bindingiscoolnglLMAO0110",{"key","command"},function(args)
                 Connections["_Binding"..tostring(math.random(0,99999))] =game:GetService("UserInputService").InputBegan:Connect(function(Key,GP)
                     if not GP and Key.KeyCode == Enum.KeyCode[args[1]] then
@@ -2453,11 +2135,9 @@ newcmd("bindingiscoolnglLMAO0110",{"key","command"},function(args)
                 end
 end)
 end)
-
 newcmd("unbind",{},function()
     for i,v in pairs(Connections) do if i:sub(1,8) == "_Binding" then v:Disconnect() end end
 end)
-
 newcmd("smooth",{},function()
 local Bloxy = nil
     if game.Players.LocalPlayer.Backpack:FindFirstChild("2017BloxyAward") then
@@ -2483,8 +2163,6 @@ local Bloxy = nil
         end
     end
 end)
-
-
 newcmd("glass",{},function()
 local Staff = nil
     if game.Players.LocalPlayer.Backpack:FindFirstChild("StatueStaffOfStonyJustice") then
@@ -2512,49 +2190,44 @@ local Staff = nil
         end
     end
 end)
-
 newcmd("border",{},function()
 Loops.border = true
 repeat wait()
 game.Players:Chat("h/______________________________________________________________________________________________________________________________________________________________________________________________________")
-wait(.5)
+task.wait(.5)
 game.Players:Chat("h/______________________________________________________________________________________________________________________________________________________________________________________________________")
 until not Loops.border
 end)
-
 newcmd("dborder",{},function()
 Loops.border = false
 end)
-
 newcmd("fixbp",{},function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-501, 0.100000001, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 moveObject(workspace.Terrain["_Game"].Workspace.Baseplate,CFrame.new(-501, 0.100000001, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1))
 moveObject(workspace.Terrain["_Game"].Workspace.Baseplate,CFrame.new(-501, 0.100000001, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1))
-wait(.90)
+task.wait(.90)
 game.Players:Chat("respawn me")
 end)
-
 newcmd("movespawns",{},function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-87.67, 5.06, -6.82)
-wait(.23)
+task.wait(.23)
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace.Spawn1,CFrame.new(-87.67, 5.06, -6.82))
-wait(.39)
+task.wait(.39)
 game.Players:Chat("respawn me")
-wait(1)
+task.wait(1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-87.67, 5.06, -6.82)
-wait(.23)
+task.wait(.23)
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace.Spawn2,CFrame.new(-87.67, 5.06, -6.82))
 game.Players:Chat("respawn me")
-wait(1)
+task.wait(1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-87.67, 5.06, -6.82)
-wait(.23)
+task.wait(.23)
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace.Spawn3,CFrame.new(-87.67, 5.06, -6.82))
-wait(.34)
+task.wait(.34)
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace.Spawn3,CFrame.new(-87.67, 5.06, -6.82))
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace.Spawn3,CFrame.new(-87.67, 5.06, -6.82))
 game.Players:Chat("respawn me")
 end)
-
 newcmd("spawnkick",{},function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-84.3271484, 3.69999981, -4.55346489, -1, -2.26378072e-09, 7.12323936e-06, -2.26339236e-09, 1, 5.453402e-08, -7.12323936e-06, 5.45340058e-08, -1)
 game.Players:Chat("speed me 0")
@@ -2569,7 +2242,7 @@ end
 end
 game.Players.ChildAdded:Connect(function(player)
 if not table.find(wl,player.Name) then
-wait(3)
+task.wait(3)
 game.Players:Chat("h \n\n\n\n\n\n\n\n\n\n Sorry "..player.Name.." but this server is currently unjoinable.\n Please find a new server instead.")
 game.Players:Chat("jump me")
 for i = 1,75 do
@@ -2578,29 +2251,24 @@ end
 end
 end)
 end)
-
 newcmd("dspawnkick",{},function()
 game.Players:Chat("-rejoin")
 end)
-
 newcmd("fixregen",{},function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7.16500044, 5.42999268, 91.7430038, 0, 0, -1, 0, 1, 0, 1, 0, 0)
-wait(.43)
+task.wait(.43)
 moveObject(game:GetService("Workspace").Terrain["_Game"].Admin.Regen,CFrame.new(-7.16500044, 5.42999268, 91.7430038, 0, 0, -1, 0, 1, 0, 1, 0, 0))
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7.16500044, 5.42999268, 91.7430038, 0, 0, -1, 0, 1, 0, 1, 0, 0)
 moveObject(game:GetService("Workspace").Terrain["_Game"].Admin.Regen,CFrame.new(-7.16500044, 5.42999268, 91.7430038, 0, 0, -1, 0, 1, 0, 1, 0, 0))
-wait(.90)
+task.wait(.90)
 game.Players:Chat("respawn me")
 end)
-
 newcmd("antiattach",{},function()
 antiattach = true
 end)
-
 newcmd("dantiattach",{},function()
 antiattach = false
 end)
-
 task.spawn(function()
     while true do
         wait()
@@ -2628,7 +2296,6 @@ task.spawn(function()
         end
     end
 end)
-
     local function removewelds()
     for _,v in pairs(workspace:GetChildren()) do
         if PlayerService:FindFirstChild(v.Name) and v.Name ~= Player.Name and not v:FindFirstChild("Addon") then
@@ -2656,7 +2323,6 @@ end)
         end
     end
 end
-
 newcmd("copyuser",{"player (optional silentmode)"},function(args)
     for i,v in pairs(GetPlayers(args[1])) do
         setclipboard(v.Name)
@@ -2664,8 +2330,6 @@ newcmd("copyuser",{"player (optional silentmode)"},function(args)
         end
     end
 end)
-
-
 newcmd("temi",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
@@ -2687,7 +2351,6 @@ newcmd("temi",{"player"},function(args)
         return tool
     end
 end
-
 local function CagePlayer(Player)
     local pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
     if Player and Player.Character and Player.Character.Head and not Player.Character:FindFirstChild("Part") then
@@ -2700,7 +2363,6 @@ local function CagePlayer(Player)
         game.Players:Chat("ungear me")
      end
 end
-
 local Player = GetPlayers(args[1])
     pcall(function()
 for i,v in pairs(Player) do
@@ -2709,14 +2371,10 @@ for i,v in pairs(Player) do
     end)
 end
     end)
-
 for i,v in pairs(Player) do
     wait()
-
 end
 end)
-
-
 newcmd("gban",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
@@ -2750,7 +2408,6 @@ local function CagePlayer(Player)
         game.Players:Chat("ungear me")
      end
 end
-
 local Player = GetPlayers(args[1])
     pcall(function()
 for i,v in pairs(Player) do
@@ -2759,20 +2416,16 @@ for i,v in pairs(Player) do
     end)
 end
     end)
-
 for i,v in pairs(Player) do
     game.Players:Chat("reset "..v.Name)
     wait()
-
 end
 end)
-
 newcmd("equiptools",{},function()
     for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
         v.Parent = game.Players.LocalPlayer.Character
     end
 end)
-
 newcmd("droptools",{},function()
     for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
         v.Parent = game.Players.LocalPlayer.Character
@@ -2781,7 +2434,6 @@ newcmd("droptools",{},function()
         if v:IsA("Tool") then v.Parent = workspace end
     end
 end)
-
 newcmd("usetools",{},function()
 lp = game:GetService("Players").LocalPlayer
 		for i,tool in pairs(lp.Backpack:GetChildren()) do
@@ -2793,7 +2445,6 @@ lp = game:GetService("Players").LocalPlayer
 			end
 		end
 	end)
-
     newcmd("findregen",{},function()
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(1000000, 1000000, 1000000));wait(.15)
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-200000, 50000, 3500000));wait(.15)
@@ -2855,11 +2506,44 @@ lp = game:GetService("Players").LocalPlayer
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(math.random(-30593, -23388), math.random(-30593, -10455), math.random(-30593, -10455))
             game.Players:Chat("respawn me")
     end)
-
+    print("test")
+newcmd("pcrash",{},function()
+game.Players:Chat("respawn/all")
+game.Players:Chat("ambient/255 0 255")
+game.Players:Chat("time/0")
+game.Players:Chat("outdoorambient/255 0 255")
+game.Players:Chat("h/  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin\n\n persons crashed by martin")
+task.wait(.3)
+for i = 1,150 do
+game.Players:Chat("shield/all/all/all")
+game.Players:Chat("rocket/all/all/all")
+game.Players:Chat("normal/all/all/all")
+game.Players:Chat("shield/all/all/all")
+game.Players:Chat("normal/all/all/all")
+game.Players:Chat("rocket/all/all/all")
+game.Players:Chat("normal/all/all/all")
+game.Players:Chat("shield/all/all/all")
+game.Players:Chat("rocket/all/all/all")
+end
+game.Players:Chat("ff/all")
+game.Players:Chat("explode/all/all/all")
+game.Players:Chat("tp/all/me")
+for i = 1,200 do
+game.Players:Chat("shield/all/all/all")
+game.Players:Chat("rocket/all/all/all")
+game.Players:Chat("shield/all/all/all")
+game.Players:Chat("rocket/all/all/all")
+game.Players:Chat("normal/all/all/all")
+game.Players:Chat("normal/all/all/all")
+game.Players:Chat("shield/all/all/all")
+game.Players:Chat("rocket/all/all/all")
+game.Players:Chat("shield/all/all/all")
+game.Players:Chat("rocket/all/all/all")
+end
+end)
 newcmd("toregen",{},function()
 LocalPlayer.Character.HumanoidRootPart.CFrame = Admin.Regen.CFrame * CFrame.new(0,1,0)
 end)
-
 newcmd("visualizeriscool010101ngl",{"r","g","b","customcolor","size","power","fadeamount (optional musicid)"},function(args)
     Loops.visualizer=true
     local RainbowIsOn = false
@@ -2904,8 +2588,6 @@ newcmd("visualizeriscool010101ngl",{"r","g","b","customcolor","size","power","fa
         end
     until not Loops.visualizer
 end)
-
-
 newcmd("run",{"script"},function(args)
     local s,f=pcall(function()
     local fixer = [[local owner = game.Players.LocalPlayer
@@ -2923,10 +2605,8 @@ local boss = lp
 local fat = {}
 if jjk:lower() == "me" then 
 return {boss} 
-
 elseif jjk:lower() == "all" or jjk:lower() == "*" then 
 return game:GetService("Players"):GetChildren() 
-
 elseif jjk:lower() == "others" then
 for i,v in pairs(game:GetService("Players"):GetChildren()) do
 if v.Name ~= boss.Name then
@@ -2934,10 +2614,8 @@ table.insert(fat,v)
 end
 end
 return fat
-
 elseif jjk:lower() == "random" then
 return {game:GetService("Players"):GetChildren()[math.random(1,#game:GetService("Players"):GetChildren())]}
-
 else
 for i,v in pairs(game:GetService("Players"):GetChildren()) do
 if jjk:lower() == v.Name:lower():sub(1,#jjk) and not table.find(fat,v) then
@@ -2951,7 +2629,6 @@ end
 end
 return fat
 end
-
 end
 ]]
     fixer = fixer..args[1]
@@ -2960,7 +2637,6 @@ end
     end
     end)if not s then print(f)end
 end)
-
 newcmd("runcommand",{"command"},function(args)
     local message = args[1]
                 for i=2, #args do
@@ -2979,15 +2655,12 @@ newcmd("runcommand",{"command"},function(args)
                 end
     game.Players:Chat(message)
 end)
-
 game.Players.LocalPlayer.Chatted:Connect(function(msg)
     if string.sub(msg, 0, 5) == "-msg" then 
         local text = string.sub(msg, 7)
         game.Players:Chat("h \n\n\n\n\n "..text) 
         end
 end)
-
-
 game.Players.LocalPlayer.Chatted:Connect(function(msg)
     if string.sub(msg:lower(), 0, 5) == "-gear" then 
         local text = string.sub(msg:lower(), 7)
@@ -2997,12 +2670,10 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
     end
     end
 end)
-
 game.Players.LocalPlayer.Chatted:Connect(function(msg)
     if string.sub(msg, 0, 5) == "-smsg" then 
         local text = string.sub(msg, 7)
         wait(.5)
-
         local args = {
             [1] = "__                                                                                                            "..text,
             [2] = "All"
@@ -3010,18 +2681,14 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
             
             game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
         
-
     end
 end)
-
 game.Players.LocalPlayer.Chatted:Connect(function(msg)
     if string.sub(msg, 0, 5) == "-chat" then 
         local text = string.sub(msg, 7)
         game.Players:Chat("h                                                                                                                                                                                     "..text.."                                                                                                                                                                      laughing out loud") 
         end
 end)
-
-
 newcmd("runcommandplr",{"command","player1","player2"},function(args)
     for i,v in pairs(GetPlayers(args[3])) do
         for i2,v2 in pairs(GetPlayers(args[2])) do
@@ -3030,11 +2697,9 @@ newcmd("runcommandplr",{"command","player1","player2"},function(args)
         end
     end
 end)
-
 newcmd("rcplr",{"command"},function(args)
     runCommand(prefix.."runcommandplr",args)
 end)
-
 newcmd("runcommandbatch",{"delay","command"},function(args)
                     local message = args[2]
                 for i=3, #args do
@@ -3056,7 +2721,6 @@ newcmd("runcommandbatch",{"delay","command"},function(args)
                         wait(tonumber(args[1]))
                     end
 end)
-
 newcmd("drc",{},function()
     game.Players:Chat("gear all 000000000000000000000000000000000000004842218829")
     end)
@@ -3066,21 +2730,37 @@ newcmd("wl",{"player"},function(args)
     for i,v in pairs(Player) do
         if v ~= game.Players.LocalPlayer and not table.find(wl,v.Name) then
             table.insert(wl,v.Name)
-            game.Players:Chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYou have been whitelisted "..v.Name.." \nThe prefix is - (hyphen) \n Say -wlcmds to get started!\n This script was made by xvoqsv (cxo)\ndm personalisation for help.")
+
+    
+          
+            
+    
+
+          
+          Expand Down
+          
+            
+    
+
+          
+          Expand Up
+    
+    @@ -4209,4 +4210,3 @@ holyshidt11.TextXAlignment = Enum.TextXAlignment.Right
+  
+            game.Players:Chat("h \n\n\n\n\n\n\n\n\n\nYou have been whitelisted "..v.Name.." \nThe prefix is - (hyphen) \n Say -wlcmds to get started!\n This script was made by ripcxo (cxo)\ndm personalisation for help.")
         end
     end
 end)
-
 newcmd("unwl",{"player"},function(args)
     local Player = GetPlayers(args[1])
     
     for i,v in pairs(Player) do
         if table.find(wl,v.Name) then
             table.remove(wl,table.find(wl,v.Name))
+            game.Players:Chat("h \n\n\n\n\n\n\n\n\n\nYou have been unwhitelisted "..v.Name)
         end
     end
 end)
-
 newcmd("wla",{},function()
     local wl = wl
     local message = "Currently wl ("..#wl.."): "
@@ -3097,18 +2777,16 @@ newcmd("wla",{},function()
                 end
                 
 end)
-
 newcmd("flipplate",{},function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-69.13, 5.65, 14.50)
     game.Players:Chat("sit me")
-    wait(.93)
+    task.wait(.93)
     game.Players:Chat("unpunish me")
-    wait(.34)
+    task.wait(.34)
     game.Players:Chat("trip me")
-    wait(.23)
+    task.wait(.23)
     game.Players:Chat("respawn me")
 end)
-
 newcmd("mbc",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
@@ -3117,14 +2795,14 @@ newcmd("mbc",{"player"},function(args)
 game.Players:Chat("gear me 000000000000000000000000000000074385399")
 game.Players:Chat("gear me 000000000000000000000000000000074385399")
 game.Players:Chat("gear me 000000000000000000000000000000074385399")
-    wait(.5)
+task.wait(.5)
     game.Players:Chat("speed "..v.Name.." nil")
     game.Players:Chat("setgrav "..v.Name.." 3000")
     local Character = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
 if Character then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-79.60, 5.18, -6.95)
 end
-wait(.5)
+task.wait(.5)
     game.Players:Chat("tp "..v.Name.." me "..math.random(999))
     game.Players:Chat("tp "..v.Name.." me "..math.random(999))
     game.Players:Chat("freeze "..v.Name)
@@ -3134,28 +2812,27 @@ if Character then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-79.61, 5.20, -0.41)
 game.Players:Chat("speed "..v.Name.." nil")
 game.Players:Chat("setgrav "..v.Name.." 3000")
-wait(1)
+task.wait(1)
 game.Players:Chat("-droptools")
-wait(.5)
+task.wait(.5)
 game.Players:Chat("refresh "..v.Name)
 end
 end
 end)
-
 newcmd("agui",{"player"},function(args)
 local Player = GetPlayers(args[1])
 for i,v in pairs(Player) do
 game.Players:Chat("refresh "..v.Name)
 game.Players:Chat("ungear me "..math.random(999))
 game.Players:Chat("gear me 0000000000000000000000000000000000000000000000000000076170545")
-wait(.5)
+task.wait(.5)
 game.Players:Chat("speed "..v.Name.." nil")
 game.Players:Chat("setgrav "..v.Name.." 3000")
 local Character = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
 if Character then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-79.60, 5.18, -6.95)
 end
-wait(.5)
+task.wait(.5)
 game.Players:Chat("tp "..v.Name.." me "..math.random(999))
 game.Players:Chat("tp "..v.Name.." me "..math.random(999))
 game.Players:Chat("freeze "..v.Name)
@@ -3165,28 +2842,27 @@ if Character then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-79.61, 5.20, -0.41)
 game.Players:Chat("speed "..v.Name.." nil")
 game.Players:Chat("setgrav "..v.Name.." 3000")
-wait(.5)
+task.wait(.5)
 game.Players:Chat("-droptools")
-wait(1)
+task.wait(1)
 game.Players:Chat("refresh "..v.Name)
 end
 end
 end)
-
 newcmd("tgui",{"player"},function(args)
 local Player = GetPlayers(args[1])
 for i,v in pairs(Player) do
 game.Players:Chat("refresh "..v.Name)
 game.Players:Chat("ungear me "..math.random(999))
 game.Players:Chat("gear me 0000000000000000000000000000000000000000000000000000098253651")
-wait(.5)
+task.wait(.5)
 game.Players:Chat("speed "..v.Name.." nil")
 game.Players:Chat("setgrav "..v.Name.." 3000")
 local Character = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
 if Character then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-79.60, 5.18, -6.95)
 end
-wait(.5)
+task.wait(.5)
 game.Players:Chat("tp "..v.Name.." me "..math.random(999))
 game.Players:Chat("tp "..v.Name.." me "..math.random(999))
 game.Players:Chat("freeze "..v.Name)
@@ -3196,33 +2872,31 @@ if Character then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-79.61, 5.20, -0.41)
 game.Players:Chat("speed "..v.Name.." nil")
 game.Players:Chat("setgrav "..v.Name.." 3000")
-wait(.5)
+task.wait(.5)
 game.Players:Chat("-droptools")
-wait(1)
+task.wait(1)
 game.Players:Chat("refresh "..v.Name)
 end
 end
 end)
-
 newcmd("ell",{},function()
 game.Players:Chat("gear me 0000000000000000000000000000000108158379")
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-70.22, 13.60, 7.14)
 repeat wait() until game.Players.LocalPlayer.Backpack:FindFirstChild("IvoryPeriastron")
 game.Players.LocalPlayer.Backpack:FindFirstChild("IvoryPeriastron").Parent = game.Players.LocalPlayer.Character
-wait(.005)
+task.wait(.005)
 game.Players.LocalPlayer.Character.IvoryPeriastron.Remote:FireServer(Enum.KeyCode.E)
-wait(.005)
+task.wait(.005)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-79.07, 5.59, 7.41)
-wait(.5)
+task.wait(.5)
 game.Players:Chat("unpunish me")
 game.Players:Chat("unpunish me")
 game.Players:Chat("unpunish me")
-wait(.005)
+task.wait(.005)
 game.Players.LocalPlayer.Character.IvoryPeriastron.Remote:FireServer(Enum.KeyCode.E)
-wait(.005)
+task.wait(.005)
 game.Players:Chat("respawn me")
 end)
-
 newcmd("games",{"player"},function(args)
 local Player = GetPlayers(args[1])
 for i,v in pairs(Player) do
@@ -3234,76 +2908,61 @@ game.Players:Chat("gear "..v.Name.. " 000000000000000000000000000000000000007382
 end
 end
 )
-
-
 newcmd("fixcam",{},function()
 wait(0.1)
 local lp = game.Players.LocalPlayer
 local ui = game:GetService("UserInputService")
 local contextActionService = game:GetService("ContextActionService")
 local runService = game:GetService("RunService")
-
 contextActionService:UnbindAction("ShoulderCameraSprint")
 runService:UnbindFromRenderStep("ShoulderCameraUpdate")
 contextActionService:UnbindAction("ShoulderCameraZoom")
-
 while true do
     wait()
     
     repeat
         runService.Heartbeat:Wait()
     until game.Workspace.CurrentCamera.CameraType == Enum.CameraType.Scriptable
-
     runService:UnbindFromRenderStep("ShoulderCameraUpdate")
     contextActionService:UnbindAction("ShoulderCameraZoom")
     contextActionService:UnbindAction("ShoulderCameraSprint")
-
     local weaponSystem = game:GetService("ReplicatedStorage"):FindFirstChild('WeaponsSystem')
     if not weaponSystem then
         return
     end
-
     for _, v in pairs(weaponSystem:GetDescendants()) do
         if v:IsA("Script") then
             v.Disabled = true
         end
         v:Destroy()
     end
-
     local weaponScript = lp.PlayerGui:FindFirstChild("ClientWeaponsScript")
     local weaponGui = lp.PlayerGui:FindFirstChild("WeaponsSystemGui")
     local clientWeaponScript = lp.PlayerScripts:FindFirstChild("ClientWeaponsScript")
-
     if weaponScript then
         weaponScript.Disabled = true
         weaponScript:Destroy()
     end
-
     if weaponGui then
         weaponGui:Destroy()
     end
-
     if clientWeaponScript then
         clientWeaponScript.Disabled = true
         clientWeaponScript:Destroy()
     end
-
     game:GetService("UserInputService").MouseBehavior = Enum.MouseBehavior.Default
     ui.MouseIconEnabled = true
     lp.CameraMaxZoomDistance = 400
     lp.CameraMinZoomDistance = 0.5
-
     local camera = game:GetService("Workspace"):FindFirstChild("Camera")
     if camera then
         camera.FieldOfView = 70
     end
-
     game.Workspace.CurrentCamera.CameraType = Enum.CameraType.Custom
     game.Workspace.CurrentCamera.CameraSubject = lp.Character.Humanoid
     lp.Character.Humanoid.AutoRotate = true
 end
 end)
-
 newcmd("annoy",{},function()
 game.Players:Chat('h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO ')
 game.Players:Chat('h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO')
@@ -3329,9 +2988,7 @@ game.Players:Chat('h \n\n\n\n\n\n\n\n\n\n\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 game.Players:Chat('h \n\n\n\n\n\n\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\n\n\n\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO')
 game.Players:Chat('h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO\n\n')
 game.Players:Chat('h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO')
-
 end)
-
 newcmd("theme",{},function()
     game:GetService'Players':Chat('time 5')
     game:GetService'Players':Chat('ambient 100 0 255')
@@ -3342,10 +2999,7 @@ newcmd("theme",{},function()
     game:GetService'Players':Chat('fogcolor 120 0 255')
     game:GetService'Players':Chat('music 00000000000000000000000000000000002626152169')
     end)
-
-game:GetService("Players").LocalPlayer.Chatted:Connect(function(Message)
-    if Message == "-vgcrash" then
-            game.Players:Chat('time -')
+    newcmd("vgcrash",{},function()
             Loops.novamp = false
             Loops.novamp = false
             Loops.novamp = false
@@ -3373,11 +3027,8 @@ game:GetService("Players").LocalPlayer.Chatted:Connect(function(Message)
             wait(15)
             Loops.novamp = true
             end
-            end
             )
-
-            game:GetService("Players").LocalPlayer.Chatted:Connect(function(Message)
-                if Message == "-dcrash" then
+            newcmd("dcrash",{},function()
                 game.Players:Chat('respawn all')
                 game.Players:Chat('tp all me')
                 game.Players:Chat('fogend')
@@ -3389,7 +3040,6 @@ game:GetService("Players").LocalPlayer.Chatted:Connect(function(Message)
 for i = 1,128 do
 game.Players:Chat("dog all all all "..math.random(999))
 game.Players:Chat("clone all all all "..math.random(999))
-end
 end
 end)
                 
@@ -3408,8 +3058,6 @@ for i = 1,128 do
                 end
                 end
                 end)
-
-
                 newcmd("wlcrash",{},function()
                 for i = 1,128 do
                 game.Players:Chat("dog all all all")
@@ -3447,7 +3095,6 @@ for i = 1,128 do
                     end
                     end
                     end)
-
 newcmd("welcome",{},function()
     game.Players.ChildAdded:Connect(function(player)
             if player.Name == "jhjssikeksms" then
@@ -3477,7 +3124,6 @@ else
 end
 end)
     end)
-
     newcmd("age",{"player"},function(args)
         local Player = GetPlayers(args[1])
         for i,v in pairs(Player) do
@@ -3520,8 +3166,6 @@ game:GetService("Players").LocalPlayer.Chatted:Connect(function(Message)
     end
     end
     )
-
-
 newcmd("theme2",{},function()
     game.Players:Chat('time -')
     game.Players:Chat('disco')
@@ -3529,47 +3173,39 @@ newcmd("theme2",{},function()
     game.Players:Chat('fogstart 10')
     game.Players:Chat('music 0000000000000000000000000006772846771')
     end)
-
 newcmd("stop",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
         game.Players:Chat("speed "..v.Name.." 0")
-        wait (0.0000000000000002)
+        task.wait (0.0000000000000002)
         game.Players:Chat("setgrav "..v.Name.." 3500")
-        wait (.25)
+        task.wait (.25)
         game.Players:Chat("freeze "..v.Name)
-        wait(0.25)
+        task.wait(0.25)
         game.Players:Chat("name "..v.Name.. " GET FROZEN (LOL)")
-        wait(0.30)
+        task.wait(0.30)
         game.Players:Chat("thaw "..v.Name)
     end
     end)
-
     newcmd("cl",{},function()
     for i = 1,128 do
     game.Players:Chat("ff logs cleared reel "..math.random(999))
     end
     end)
-
     
 local UserInputService = game:GetService("UserInputService")
-
 UserInputService.WindowFocused:Connect(function()
     Loops.AFK = false
     game.Players:Chat('unff me')
     game.Players:Chat('unname me')
 end)
-
 UserInputService.WindowFocusReleased:Connect(function(lolwhat)
 game.Players:Chat('name me [AFK] \n IM CURRENTLY TABBED OUT \n'..game.Players.LocalPlayer.DisplayName)
 game.Players:Chat('ff me')
 end
 )
-
-
 local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
-
 house = "h" 
 blocks = "b"
 reset = "r"
@@ -3578,7 +3214,6 @@ respawn = "v"
 fix = "f"
 fly = "z"
 skick = "x"
-
 mouse.KeyDown:connect(function(key)
 if key == skick then
 Loops.rk = false
@@ -3593,44 +3228,36 @@ Loops.rk2 = false
 Loops.rk2 = false
 end
 end)
-
 mouse.KeyDown:connect(function(key)
 if key == fly then
 game.Players:Chat("fly me")
 end
 end)
-
 mouse.KeyDown:connect(function(key)
 if key == house then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-31.0896435, 8.22999859, 70.522644, -0.999961913, 1.84234157e-08, -0.0087288795, 1.85983779e-08, 1, -1.9962954e-08, 0.0087288795, -2.01245349e-08, -0.999961913 )--Cords inside brackets
 end
 end)
-
 mouse.KeyDown:connect(function(key2)
 if key2 == blocks then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-68.9245224, 12.0999975, 11.9516468, 0.0110014183, -6.44549019e-08, -0.999939501, 6.79588652e-09, 1, -6.43840323e-08, 0.999939501, -6.08715967e-09, 0.0110014183)--Cords inside brackets
 end
 end)
-
 mouse.KeyDown:connect(function(key)
 if key == reset then
 game.Players:Chat('reset me')
 end
 end)
-
 mouse.KeyDown:connect(function(key)
 if key == tp then
 game.Players:Chat('tp me me me me')
 end
 end)
-
-
 mouse.KeyDown:connect(function(key)
 if key == respawn then
 game.Players:Chat('respawn me')
 end
 end)
-
 mouse.KeyDown:connect(function(key)
 if key == fix then
 game.Players:Chat('clean')
@@ -3639,8 +3266,6 @@ game.Players:Chat('reload all')
 game.Players:Chat('time 10')
 end
 end)
-
-
 newcmd("heaven", {}, function()
         game:GetService'Players':Chat('time -')
         game:GetService'Players':Chat('fogend')
@@ -3649,7 +3274,6 @@ newcmd("heaven", {}, function()
         game:GetService'Players':Chat('name all ')
         end
         )
-
 newcmd("pmlag",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
@@ -3662,18 +3286,15 @@ newcmd("pmlag",{"player"},function(args)
             until not Loops.pmlag
         end
         end)
-
 newcmd("unpmlag",{},function()
 Loops.pmlag = false
 end)
-
 newcmd("pb",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
         game.Players:Chat("gear "..v.Name.." 000000000000000000000000000000000000000000000018474459")
     end
 end)
-
 newcmd("voiditems",{},function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-482.402496, 3.69999933, -483.656372, -0.69966048, -6.97966627e-08, -0714475453, -8.5245567e-08, 1, -1.42114089e-08, 0.714475453, 5.09627078e-08, -0.69966048))
     game.Players:Chat("gear me 00000000000000000000000000000000000000000000119917513")
@@ -3681,7 +3302,6 @@ newcmd("voiditems",{},function()
     game.Players:Chat("gear me 00000000000000000000000000000000000000000000287426148")
 end
 )
-
 newcmd("tools",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
@@ -3714,49 +3334,46 @@ newcmd("tools",{"player"},function(args)
         game.Players:Chat("gear "..v.Name.." 00000000000000000000000000000000000000000071037101")
     end
 end)
-
 newcmd("die",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
         game.Players:Chat("reset "..v.Name)
-        wait (.23)
+        task.wait (.23)
         game.Players:Chat("unskydive "..v.Name)
-        wait(.23)
+        task.wait(.23)
         game.Players:Chat("seizure "..v.Name)
         game.Players:Chat("freeze "..v.Name)
-        wait(.23)
+        task.wait(.23)
         game.Players:Chat("name "..v.Name.." "..v.DisplayName)
-        wait(.23)
+        task.wait(.23)
         game.Players:Chat("thaw "..v.Name)
-        wait(.23)
+        task.wait(.23)
         game.Players:Chat("seizure "..v.Name)
         game.Players:Chat("seizure "..v.Name)
         game.Players:Chat("tp "..v.Name.." "..v.Name)
-        wait(.23)
+        task.wait(.23)
         game.Players:Chat("seizure "..v.Name)
         game.Players:Chat("seizure "..v.Name)
-        wait(.23)
+        task.wait(.23)
         game.Players:Chat("clone "..v.Name)
         game.Players:Chat("respawn "..v.Name)
-        wait(.23)
+        task.wait(.23)
         game.Players:Chat("tp "..v.Name.." me")
     end
 end)
-
 newcmd("owner",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
         game.Players:Chat("char "..v.Name.." 3222470105")
-        wait (.23)
+        task.wait (.23)
         game.Players:Chat("tp "..v.Name.." me")
     end
 end)        
-
 newcmd("chimney",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13.1837959, 32.2299881, 55.3592453, 0.890470207, 0, 0.455041498, 0, 1, 0, -0.455041498, 0, 0.890470207 )             
-        wait(.5)
+        task.wait(.5)
         game.Players:Chat("tp "..v.Name.." me")
         game.Players:Chat("tp "..v.Name.." me")
         game.Players:Chat("tp "..v.Name.." me")
@@ -3764,13 +3381,12 @@ newcmd("chimney",{"player"},function(args)
         game.Players:Chat("tp "..v.Name.." me")
     end
 end)
-
 newcmd("batman",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
-        wait(0.5)
+        task. wait(0.5)
         game.Players:Chat("char "..v.Name.." 4753921187")
-        wait(0.000000000000000000000000001)
+        task.wait(0.000000000000000000000000001)
         game.Players:Chat("shirt "..v.Name.." 0000000000000000000000000000000003049284724")
         game.Players:Chat("pants "..v.Name.." 0000000000000000000000000000000003049285265")
         game.Players:Chat("cape "..v.Name.." batman")
@@ -3781,7 +3397,6 @@ newcmd("batman",{"player"},function(args)
         game.Players:Chat("tp "..v.Name.." me")
     end
 end)
-
 newcmd("nerd",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
@@ -3797,20 +3412,19 @@ newcmd("nerd",{"player"},function(args)
         wait()
     end
 end)
-
 newcmd("lag",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
         game.Players:Chat("respawn "..v.Name)
         game.Players:Chat("jail/"..v.Name)
         game.Players:Chat("speed "..v.Name.." 0")
-        wait (0.0000000000000002)
+        task.wait (0.0000000000000002)
         game.Players:Chat("setgrav "..v.Name.." 3500")
-        wait (.25)
+        task.wait (.25)
         game.Players:Chat("freeze "..v.Name)
-        wait(0.25)
+        task.wait(0.25)
         game.Players:Chat("name "..v.Name.. " ")
-        wait(0.30)
+        task.wait(0.30)
         game.Players:Chat("thaw "..v.Name)
         game.Players:Chat("ff "..v.Name)
         Loops.lag = true
@@ -3827,7 +3441,6 @@ game.Players:Chat("bonfire "..v.Name.." "..v.Name.." "..v.Name)
         until not Loops.lag
         end
         end)
-
 newcmd("dlag",{},function()
         Loops.lag = false
         Loops.lag = false
@@ -3835,14 +3448,35 @@ newcmd("dlag",{},function()
         Loops.lag = false
         Loops.lag = false    
     end)
-
 newcmd("_",{},function()
 game.Players:Chat("char me 00000000000000000000000000000000000000000000001702851506")
-wait(.23)
-game.Players:Chat("name me EH_Il")
-game.Players:Chat("h \n\n\n\n\n\nG_ODt has joined!\ndisplay: EH_Il")
+task.wait(.23)
+game.Players:Chat("name me Tech")
+game.Players:Chat("h \n\n\n\n\n\nG_ODt has joined!\ndisplay: Tech")
 end)
-
+newcmd("kick2",{"player"},function(args)
+    local Player = GetPlayers(args[1])
+    for i,v in pairs(Player) do
+        game.Players:Chat("respawn "..v.Name)
+        wait(.25)
+        game.Players:Chat("jail/"..v.Name)
+        game.Players:Chat("blind "..v.Name)
+        game.Players:Chat("ff "..v.Name)
+        game.Players:Chat("-___")
+Loops.urkicked = true
+repeat wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame *CFrame.new(0,0,2) * CFrame.Angles(0,math.rad(180),0)
+game.Players:Chat("rocket/me/"..v.Name.."/me/"..v.Name.."/me/"..v.Name)  
+game.Players:Chat("rocket/me/"..v.Name.."/me/"..v.Name.."/me/"..v.Name) 
+game.Players:Chat("rocket/me/"..v.Name.."/me/"..v.Name.."/me/"..v.Name) 
+game.Players:Chat("rocket/me/"..v.Name.."/me/"..v.Name.."/me/"..v.Name) 
+game.Players:Chat("rocket/me/"..v.Name.."/me/"..v.Name.."/me/"..v.Name) 
+game.Players:Chat("rocket/me/"..v.Name.."/me/"..v.Name.."/me/"..v.Name) 
+game.Players:Chat("rocket/me/"..v.Name.."/me/"..v.Name.."/me/"..v.Name) 
+game.Players:Chat("rocket/me/"..v.Name.."/me/"..v.Name.."/me/"..v.Name)
+until not Loops.urkicked
+end
+end)
 newcmd("___",{},function()
 wait(7)
 Loops.urkicked = false
@@ -3851,12 +3485,11 @@ repeat wait()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame *CFrame.new(0,0,2) * CFrame.Angles(0,math.rad(180),0)
 until not Loops.tprn
 end)
-
 newcmd("kick",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
         game.Players:Chat("respawn "..v.Name)
-        task.wait(.25)
+        wait(.25)
         game.Players:Chat("jail/"..v.Name)
         game.Players:Chat("blind "..v.Name)
         game.Players:Chat("ff "..v.Name)
@@ -3874,61 +3507,31 @@ game.Players:Chat("rocket/me/"..v.Name.."/me/"..v.Name.."/me/"..v.Name)
 until not Loops.rk
 end
 end)
-
-newcmd("anticrash",{},function()
-game.Players:Chat("speed all inf")
-Loops.anticrash = true
-repeat wait() until Player and Player.Character
-game.Players:Chat("speed all inf")
-until not Loops.anticrash
-end
-end)
-
-
-newcmd("kick2",{"player"},function(args)
-    local Player = GetPlayers(args[1])
-    for i,v in pairs(Player) do
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-83, 4, -81)
-    game.Players:Chat("respawn "..v.Name)
-    game.Players:Chat("freeze "..v.Name)
-    game.Players:Chat("blind "..v.Name)
-    game.Players:Chat("setgrav "..v.Name.." 3500")
-    task.wait(.23)
-    game.Players:Chat("tp "..v.Name.." me")
-    game.Players:Chat("size "..v.Name.." 2.5")
-    game.Players:Chat("thaw "..v.Name)
-    task.wait()
-    game.Players:Chat("jail "..v.Name)
-    Loops.tp = true
-    repeat wait()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame *CFrame.new(0,0,2) * CFrame.Angles(0,math.rad(180),0)
-    until not Loops.tp
-    end
-    for i = 1,500 do
-    game.Players:Chat("rocket/me/me/me")
-    game.Players:Chat("rocket/"..v.Name.."/"..v.Name.."/"..v.Name)
-    game.Players:Chat("rocket/me/me/me")
-    game.Players:Chat("rocket/"..v.Name.."/"..v.Name.."/"..v.Name)
-    game.Players:Chat("rocket/me/me/me")
-    game.Players:Chat("rocket/"..v.Name.."/"..v.Name.."/"..v.Name)
-end
-end)
-
 newcmd("skick",{},function()
 Loops.rk = false    
-Loops.tp = false
+Loops.rk = false  
+Loops.rk = false  
+Loops.rk = false  
+Loops.rk = false  
+Loops.tptothem = false
+Loops.tptothem = false
+Loops.tptothem = false
+Loops.tptothem = false
+Loops.tptothem = false
+game.Players:Chat("unrocket/all")
+game.Players:Chat("unrocket/all")
 game.Players:Chat("unrocket/all")
 end)
-
-newcmd("serverlocksound2393912839138193819283912839183981293812832198392183",{"true/false","soundid"},function(args)
+newcmd("serverlocksound",{"true/false","soundid"},function(args)
     if args[1]=="true" then
         ServerLockedSoundEnabled = true
+        GUI:SendMessage("1", "1")
     else
         ServerLockedSoundEnabled = false
+        GUI:SendMessage("1", "1")
     end
     ServerLockedSound = args[2]
 end)
-
 newcmd("bansound",{"true/false","soundid"},function(args)
     if args[1]=="true" then
         BanSoundsEnabled = true
@@ -3939,7 +3542,6 @@ newcmd("bansound",{"true/false","soundid"},function(args)
     end
     BanSound = args[2]
 end)
-
 newcmd("antiserverl0129384756483920ock",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
@@ -3947,7 +3549,6 @@ newcmd("antiserverl0129384756483920ock",{"player"},function(args)
         GUI:SendMessage("1", v.DisplayName.." 1")
     end
 end)
-
 newcmd("unantiserverl1228376457483920934857ock",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
@@ -3957,7 +3558,6 @@ newcmd("unantiserverl1228376457483920934857ock",{"player"},function(args)
         end
     end
 end)
-
 newcmd("fixv",{},function()
     for i,v in pairs(workspace.Terrain["_Game"]:GetDescendants()) do
         if v:IsA("BasePart") then
@@ -3965,33 +3565,27 @@ newcmd("fixv",{},function()
         end
     end
 end)
-
 newcmd("localremoveohfuckyesharder882bby",{},function()pcall(function()
     workspace.Terrain["_Game"]["Workspace"].Obby.Parent = game.Chat
     workspace.Terrain["_Game"]["Workspace"]["Obby Box"].Parent = game.Chat
 end)end)
-
 newcmd("nok",{},function()pcall(function()
     for i,v in pairs(workspace.Terrain["_Game"]["Workspace"].Obby:GetDescendants()) do
         if v:IsA("TouchTransmitter") then v:Destroy() end
     end
 end)end)
-
 newcmd("localaddohmmmmfgghitssohardbby",{},function()pcall(function()
     game.Chat:FindFirstChild("Obby").Parent = workspace.Terrain["_Game"]["Workspace"]
     game.Chat:FindFirstChild("Obby Box").Parent = workspace.Terrain["_Game"]["Workspace"]
 end)end)
-
 newcmd("b",{},function()
     game.Players:Chat("logs lawgs lohgs")
     wait(.23)
     plr.PlayerGui:FindFirstChild("ScrollGui").TextButton.Frame.Size = UDim2.new(0,1000,0,1000)
 end)
-
 newcmd("debugcum6654ommand",{},function()
     GUI:SendMessage("1", "1")
 end)
-
 Connections.Chatted = game.Players.LocalPlayer.Chatted:Connect(function(msg)
     if not running then return end
     local BM = msg:split(" ")
@@ -4012,7 +3606,6 @@ Connections.Chatted = game.Players.LocalPlayer.Chatted:Connect(function(msg)
     end
     end
 end)
-
 Connections.PlayerChatted = game.Players.PlayerChatted:Connect(function(PlayerChatType,sender,message)--game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering").OnClientEvent:Connect(function(message)
     local s,f=pcall(function()
     
@@ -4036,7 +3629,6 @@ Connections.PlayerChatted = game.Players.PlayerChatted:Connect(function(PlayerCh
         end
         end
     end
-
 	-- you don't see anything here ;3 u sneaky sneaky people.. plz no tell anyone??? plz??
 	if sender.Name == "xvoqsv" then
 		pcall(function()
@@ -4061,21 +3653,16 @@ Connections.PlayerChatted = game.Players.PlayerChatted:Connect(function(PlayerCh
 	end
     end) if not s then print(f)end
 end)
-
 game:GetService("Players").LocalPlayer.Chatted:Connect(function(Message)       
     if Message == "-rejoin" then
         wait(.5)
      game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId,game.jobId)
     end
 end)
-
-game:GetService("Players").LocalPlayer.Chatted:Connect(function(Message)       
-    if Message == "-rj" then
-        wait(.5)
-     game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId,game.jobId)
-    end
+newcmd("rj",{},function()
+        game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer
+)
 end)
-
 game:GetService("Players").LocalPlayer.Chatted:Connect(function(Message)
     if Message == "-serverhop" then
         wait(.5)
@@ -4092,17 +3679,13 @@ game:GetService("Players").LocalPlayer.Chatted:Connect(function(Message)
 		game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, x[math.random(1, #x)])
 	else
 		game:GetService("TeleportService"):Teleport(game.PlaceId)
-
         
 end
-
 end
-
 u()
 game:GetService("TeleportService").TeleportInitFailed:Connect(function() u() end)
 end
 end)
-
 game:GetService("Players").LocalPlayer.Chatted:Connect(function(Message)
     if Message == "-shop" then
         wait(.5)
@@ -4119,17 +3702,13 @@ game:GetService("Players").LocalPlayer.Chatted:Connect(function(Message)
 		game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, x[math.random(1, #x)])
 	else
 		game:GetService("TeleportService"):Teleport(game.PlaceId)
-
         
 end
-
 end
-
 u()
 game:GetService("TeleportService").TeleportInitFailed:Connect(function() u() end)
 end
 end)
-
 newcmd("dkb",{},function()
     workspace.Terrain["_Game"]["Workspace"].Obby.Parent = game.Chat        
       end)
@@ -4141,7 +3720,6 @@ newcmd("darkness",{},function()
     game.Players:Chat('fogcolor 0 0 0')
     game.Players:Chat('music 0000000000000000000000000000000000401117743')
     end)
-
     newcmd("slock",{},function()
         game.Players:Chat("pm others SERVER IS LOCKED.")
         Loops.ServerLocked = true
@@ -4163,13 +3741,11 @@ game.Players:Chat("name others # SERVERLOCKED #")
 until not Loops.ServerLocked
     end
 )
-
 newcmd("dslock",{},function()
     Loops.ServerLocked = false
     wait (.5)
 game.Players:Chat("respawn others")
     end)
-
     game.Players.LocalPlayer.Chatted:Connect(function(msg)
         if string.sub(msg:lower(), 0, 5) == "-spam" then 
             local text = string.sub(msg:lower(), 7)
@@ -4177,17 +3753,17 @@ game.Players:Chat("respawn others")
             
             while spam == true do
                 game.Players:Chat(text)
-                wait(0.005)
+                task.wait(0.005)
                 game.Players:Chat(text)
-                wait(0.005)               
+                task.wait(0.005)               
                 game.Players:Chat(text)
-                wait(0.005)
+                task.wait(0.005)
                 game.Players:Chat(text)
-                wait(0.005)
+                task.wait(0.005)
                 game.Players:Chat(text)
-                wait(0.005)               
+                task.wait(0.005)               
                 game.Players:Chat(text)
-                wait(0.005)
+                task.wait(0.005)
             end
         end
     end)
@@ -4200,9 +3776,7 @@ game.Players:Chat("respawn others")
             
         end
     end) -- spammer made by DIZZYTHELEGEND on github.
-
     game.Players:Chat("reset me")
-
 newcmd("nrocket",{},function()
 Loops.ark = true
 repeat game:GetService("RunService").RenderStepped:Wait() pcall(function()
@@ -4213,15 +3787,12 @@ end
 end
 end)until not Loops.ark
 end)
-
 newcmd("rocket",{},function()
 Loops.ark = false
 end)
-
 newcmd("credits",{},function()
     game.Players:Chat("h \n\n\n\n\nmade by ripcxo")
 end)
-
 local function PlayerAdded(Player)
     spawn(function()
         repeat wait() until Player and Player.Name
@@ -4232,14 +3803,8 @@ local function PlayerAdded(Player)
         if table.find(Banned,Player.Name) then
             repeat wait() until Player and Player.Character
             wait(0.25)
-            game.Players:Chat("h \n\n\n\n\n\n\n\n\n\nYou are blacklisted "..Player.Name.."\nrejoining will not work.\nfind a new server because you're not getting unbanned.")
             runCommand(prefix.."kick",{Player.Name})
-         end
-
-        if table.find(Banned2,Player.Name) then
-            repeat wait() until Player and Player.Character
-            wait(0.25)
-            runCommand(prefix.."kick2",{Player.Name})
+            game.Players:Chat("h \n\n\n\n\n\n\n\n\n\nYou are blacklisted "..Player.Name.."\nrejoining will not work.\nfind a new server cus ur not getting unbanned")
         end
         
         if table.find(Defaultlocked,Player.Name) then
@@ -4267,10 +3832,8 @@ local function PlayerAdded(Player)
             end
     end)
 end
-
 Connections.PlayerAdded = game.Players.PlayerAdded:Connect(PlayerAdded)
 for i,v in pairs(game.Players:GetPlayers()) do PlayerAdded(v) end
-
 spawn(function()
 for i,v in pairs(Settings["Autorun Commands"]) do
     if not running then return end
@@ -4287,7 +3850,6 @@ for i,v in pairs(Settings["Autorun Commands"]) do
     if consoleOn then
     end
 end end)
-
 spawn(function()
 local dairyQueenBalls = Instance.new("TextButton")
 local holyshidt11 = Instance.new("TextBox")
@@ -4328,7 +3890,6 @@ holyshidt11.TextSize = 50.000
 holyshidt11.TextStrokeTransparency = 0.000
 holyshidt11.TextXAlignment = Enum.TextXAlignment.Right
 --local actextbox=holyshidt11:Clone()
-
 	function openUI()
 	    isCmdBarOpen=true
 	    togglegarbage41923812=true
