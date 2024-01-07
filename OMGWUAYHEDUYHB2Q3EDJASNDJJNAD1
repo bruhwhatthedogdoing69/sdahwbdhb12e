@@ -3625,7 +3625,6 @@ newcmd("clown",{"player"},function(args)
         game.Players:Chat("shirt "..v.Name.." 00000000000000000000000000000000011238302368")
         game.Players:Chat("pants "..v.Name.." 0000000000000000000000000000000001328316296")
         game.Players:Chat("hat "..v.Name.." 000000000000000000000000000000000000015469944")
-        game.Players:Chat("tp "..v.Name.." me")
     end
 end)
 
