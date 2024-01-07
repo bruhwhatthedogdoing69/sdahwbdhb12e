@@ -3620,6 +3620,7 @@ newcmd("clown",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
         task.wait(0.5)
+        game.Players:Chat("unhat "..v.Name)
         game.Players:Chat("paint "..v.Name.." white")
         game.Players:Chat("shirt "..v.Name.." 00000000000000000000000000000000011238302368")
         game.Players:Chat("pants "..v.Name.." 0000000000000000000000000000000001328316296")
