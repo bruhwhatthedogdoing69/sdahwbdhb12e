@@ -3881,6 +3881,7 @@ Loops.anticrash = true
 repeat wait() until Player and Player.Character
 game.Players:Chat("speed all inf")
 until not Loops.anticrash
+end
 end)
 
 
