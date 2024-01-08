@@ -3810,7 +3810,8 @@ newcmd("float",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
         game.Players:Chat("setgrav "..v.Name.." -252.155")
-        game.Players:Chat("unsize "..v.Name.." "..v.Name)
+        game.Players:Chat("unsize "..v.Name)
+        game.Players:Chat("unsize "..v.Name)
     end)
 
 newcmd("lag",{"player"},function(args)
