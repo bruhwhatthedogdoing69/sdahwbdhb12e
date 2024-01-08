@@ -3852,22 +3852,6 @@ newcmd("b",{},function()
     plr.PlayerGui:FindFirstChild("ScrollGui").TextButton.Frame.Size = UDim2.new(0,1000,0,1000)
 end)
 
-newcmd("eyelee",{"player"},function(args)
-    local Player = GetPlayers(args[1])
-    for i,v in pairs(Player) do
-        game.Players:Chat("setgrav "..v.Name.." -252.155")
-        game.Players:Chat("trip "..v.Name)
-        game.Players:Chat("stun "..v.Name)
-    end)
-
-newcmd("float",{"player"},function(args)
-    local Player = GetPlayers(args[1])
-    for i,v in pairs(Player) do
-        game.Players:Chat("setgrav "..v.Name.." -252.155")
-        game.Players:Chat("unsize "..v.Name)
-        game.Players:Chat("unsize "..v.Name)
-    end)
-
 newcmd("debugcum6654ommand",{},function()
     GUI:SendMessage("1", "1")
 end)
