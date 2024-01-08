@@ -3766,34 +3766,8 @@ until not Loops.rk
 end
 end)
 
-newcmd("k",{"player"},function(args)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-83, 4, -81)
-game.Players:Chat("respawn "..v.Name)
-game.Players:Chat("freeze "..v.Name)
-game.Players:Chat("blind "..v.Name)
-game.Players:Chat("setgrav "..v.Name.." 3500")
-task.wait(.23)
-game.Players:Chat("tp "..v.Name.." me")
-game.Players:Chat("size "..v.Name.." 2.5")
-game.Players:Chat("thaw "..v.Name)
-task.wait()
-game.Players:Chat("jail "..v.Name)
-Loops.k = true
-repeat wait()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame *CFrame.new(0,0,2) * CFrame.Angles(0,math.rad(180),0)
-game.Players:Chat("rocket/me/me/me")
-game.Players:Chat("rocket/"..v.Name.."/"..v.Name.."/"..v.Name)
-game.Players:Chat("rocket/me/me/me")
-game.Players:Chat("rocket/"..v.Name.."/"..v.Name.."/"..v.Name)
-game.Players:Chat("rocket/me/me/me")
-game.Players:Chat("rocket/"..v.Name.."/"..v.Name.."/"..v.Name)
-until not Loops.k
-end
-end)
-
 newcmd("skick",{},function()
 Loops.rk = false    
-Loops.k = false
 game.Players:Chat("unrocket/all")
 game.Players:Chat("unrocket/all")
 game.Players:Chat("unrocket/all")
@@ -4275,4 +4249,3 @@ holyshidt11.TextXAlignment = Enum.TextXAlignment.Right
 		end
 	end)
 end)
-print("hello")
