@@ -1040,21 +1040,6 @@ newcmd("stoplg",{},function()
     Loops.autoadmin = false
 end)
 
-newcmd("eyelee",{"player"},function(args)
-    local Player = GetPlayers(args[1])
-    for i,v in pairs(Player) do
-        game.Players:Chat("setgrav "..v.Name.." -252.155")
-        game.Players:Chat("trip "..v.Name)
-        game.Players:Chat("stun "..v.Name)
-    end)
-
-newcmd("float",{"player"},function(args)
-    local Player = GetPlayers(args[1])
-    for i,v in pairs(Player) do
-        game.Players:Chat("setgrav "..v.Name.." -252.155")
-        game.Players:Chat("unsize "..v.Name.." "..v.Name)
-    end)
-
 newcmd("perm",{},function()
     Loops.perm = true
     repeat game:GetService("RunService").RenderStepped:Wait()
@@ -1236,7 +1221,8 @@ function moveObject(target,wawawaa)
 end
 
 newcmd("spawnkill",{},function()
-ot nmoveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump,CFrame.new(-41.80, 5.08, -25.59))
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-41.80, 5.08, -25.59)
+moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump,CFrame.new(-41.80, 5.08, -25.59))
 moveObject(game:GetService("Workspace").Terrain["_Game"].Workspace["Obby"].Jump,CFrame.new(-41.80, 5.08, -25.59))
 task.wait(.39)
 game.Players:Chat("respawn me")
@@ -3865,6 +3851,22 @@ newcmd("b",{},function()
     wait(.23)
     plr.PlayerGui:FindFirstChild("ScrollGui").TextButton.Frame.Size = UDim2.new(0,1000,0,1000)
 end)
+
+newcmd("eyelee",{"player"},function(args)
+    local Player = GetPlayers(args[1])
+    for i,v in pairs(Player) do
+        game.Players:Chat("setgrav "..v.Name.." -252.155")
+        game.Players:Chat("trip "..v.Name)
+        game.Players:Chat("stun "..v.Name)
+    end)
+
+newcmd("float",{"player"},function(args)
+    local Player = GetPlayers(args[1])
+    for i,v in pairs(Player) do
+        game.Players:Chat("setgrav "..v.Name.." -252.155")
+        game.Players:Chat("unsize "..v.Name)
+        game.Players:Chat("unsize "..v.Name)
+    end)
 
 newcmd("debugcum6654ommand",{},function()
     GUI:SendMessage("1", "1")
