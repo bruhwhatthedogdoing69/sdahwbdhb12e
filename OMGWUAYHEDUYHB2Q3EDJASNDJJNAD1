@@ -3695,39 +3695,6 @@ game.Players:Chat("name me Tech")
 game.Players:Chat("h \n\n\n\n\n\nG_ODt has joined!\ndisplay: Tech")
 end)
 
-newcmd("kick2",{"player"},function(args)
-    local Player = GetPlayers(args[1])
-    for i,v in pairs(Player) do
-        game.Players:Chat("respawn "..v.Name)
-        wait(.25)
-        game.Players:Chat("jail/"..v.Name)
-        game.Players:Chat("blind "..v.Name)
-        game.Players:Chat("ff "..v.Name)
-        game.Players:Chat("-___")
-Loops.urkicked = true
-repeat wait()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame *CFrame.new(0,0,2) * CFrame.Angles(0,math.rad(180),0)
-game.Players:Chat("rocket/me/"..v.Name.."/me/"..v.Name.."/me/"..v.Name)  
-game.Players:Chat("rocket/me/"..v.Name.."/me/"..v.Name.."/me/"..v.Name) 
-game.Players:Chat("rocket/me/"..v.Name.."/me/"..v.Name.."/me/"..v.Name) 
-game.Players:Chat("rocket/me/"..v.Name.."/me/"..v.Name.."/me/"..v.Name) 
-game.Players:Chat("rocket/me/"..v.Name.."/me/"..v.Name.."/me/"..v.Name) 
-game.Players:Chat("rocket/me/"..v.Name.."/me/"..v.Name.."/me/"..v.Name) 
-game.Players:Chat("rocket/me/"..v.Name.."/me/"..v.Name.."/me/"..v.Name) 
-game.Players:Chat("rocket/me/"..v.Name.."/me/"..v.Name.."/me/"..v.Name)
-until not Loops.urkicked
-end
-end)
-
-newcmd("___",{},function()
-wait(7)
-Loops.urkicked = false
-Loops.tprn = true
-repeat wait()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame *CFrame.new(0,0,2) * CFrame.Angles(0,math.rad(180),0)
-until not Loops.tprn
-end)
-
 newcmd("kick",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
@@ -3735,12 +3702,12 @@ newcmd("kick",{"player"},function(args)
 		wait(.23)
 		game.Players:Chat("freeze "..v.Name)
         wait(.25)
+        game.Players:Chat("thaw "..v.Name)
         game.Players:Chat("jail/"..v.Name)
-		game.Players:Chat("thaw "..v.Name)
         game.Players:Chat("blind "..v.Name)
         game.Players:Chat("ff "..v.Name)
-		wait(.23)
-		game.Players:Chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n byebye "..v.Name.." you just got crashed by cxo enjoy no fps")
+wait(.23)
+game.Players:Chat("h \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n byebye "..v.Name.." you just got crashed by cxo")
 Loops.rk = true
 repeat wait()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame *CFrame.new(0,0,2) * CFrame.Angles(0,math.rad(180),0)
