@@ -3732,10 +3732,13 @@ newcmd("kick",{"player"},function(args)
     local Player = GetPlayers(args[1])
     for i,v in pairs(Player) do
         game.Players:Chat("respawn "..v.Name)
+		game.Players:Chat("freeze "..v.Name)
+		game.Players:Chat("thaw "..v.Name)
         wait(.25)
         game.Players:Chat("jail/"..v.Name)
         game.Players:Chat("blind "..v.Name)
         game.Players:Chat("ff "..v.Name)
+		wait(.23)
 Loops.rk = true
 repeat wait()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame *CFrame.new(0,0,2) * CFrame.Angles(0,math.rad(180),0)
